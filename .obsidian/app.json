@@ -1,0 +1,14 @@
+{
+  "strictLineBreaks": false,
+  "showFrontmatter": true,
+  "defaultViewMode": "preview",
+  "livePreview": true,
+  "showLineNumber": true,
+  "userIgnoreFilters": [
+    "node_modules/",
+    "quartz/",
+    "public/",
+    ".quartz-cache/",
+    ".github/"
+  ]
+}
