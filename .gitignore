@@ -1,5 +1,5 @@
 node_modules/
 public/
 .quartz-cache/
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+content/.obsidian/workspace.json
+content/.obsidian/workspace-mobile.json

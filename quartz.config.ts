@@ -10,15 +10,7 @@ const config: QuartzConfig = {
     analytics: null,
     locale: "en-US",
     baseUrl: "knowledge.glitch.trading",
-    ignorePatterns: [
-      ".obsidian",
-      "templates",
-      "node_modules",
-      "quartz",
-      ".quartz-cache",
-      "public",
-      ".github",
-    ],
+    ignorePatterns: [".obsidian", "templates"],
     defaultDateType: "modified",
     theme: {
       fontOrigin: "googleFonts",
@@ -30,7 +22,7 @@ const config: QuartzConfig = {
       },
       colors: {
         lightMode: {
-          light: "#222436",
+          light: "#09090D",
           lightgray: "#2f334d",
           gray: "#444a73",
           darkgray: "#a9b8e8",
@@ -41,7 +33,7 @@ const config: QuartzConfig = {
           textHighlight: "rgba(255, 199, 119, 0.25)",
         },
         darkMode: {
-          light: "#222436",
+          light: "#09090D",
           lightgray: "#2f334d",
           gray: "#444a73",
           darkgray: "#a9b8e8",

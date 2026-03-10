@@ -475,9 +475,7 @@ export async function handleBuild(argv) {
       "**/*.tsx",
       "**/*.scss",
       "package.json",
-    ], {
-      ignore: ["node_modules/**", "public/**", ".quartz-cache/**"],
-    })
+    ])
     chokidar
       .watch(paths, { ignoreInitial: true })
       .on("add", () => build(clientRefresh))

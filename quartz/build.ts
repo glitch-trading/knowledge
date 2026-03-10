@@ -147,14 +147,6 @@ async function startWatching(
     persistent: true,
     cwd: argv.directory,
     ignoreInitial: true,
-    ignored: [
-      "**/node_modules/**",
-      "**/public/**",
-      "**/.quartz-cache/**",
-      "**/.git/**",
-      "**/.obsidian/**",
-      "**/.github/**",
-    ],
   })
 
   const changes: ChangeEvent[] = []

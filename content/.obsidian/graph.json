@@ -1,0 +1,107 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "tag:#tier-1",
+      "color": {
+        "a": 1,
+        "rgb": 5285785
+      }
+    },
+    {
+      "query": "tag:#tier-2",
+      "color": {
+        "a": 1,
+        "rgb": 5301186
+      }
+    },
+    {
+      "query": "tag:#tier-3",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#tier-4",
+      "color": {
+        "a": 1,
+        "rgb": 14423100
+      }
+    },
+    {
+      "query": "tag:#tier-5",
+      "color": {
+        "a": 1,
+        "rgb": 8359053
+      }
+    },
+    {
+      "query": "tag:#tier-6",
+      "color": {
+        "a": 1,
+        "rgb": 10724259
+      }
+    },
+    {
+      "query": "tag:#book",
+      "color": {
+        "a": 1,
+        "rgb": 3308529
+      }
+    },
+    {
+      "query": "tag:#paper",
+      "color": {
+        "a": 1,
+        "rgb": 16744192
+      }
+    },
+    {
+      "query": "tag:#concept",
+      "color": {
+        "a": 1,
+        "rgb": 14701233
+      }
+    },
+    {
+      "query": "tag:#course",
+      "color": {
+        "a": 1,
+        "rgb": 14701138
+      }
+    },
+    {
+      "query": "tag:#strategies",
+      "color": {
+        "a": 1,
+        "rgb": 14725458
+      }
+    },
+    {
+      "query": "tag:#roadmap",
+      "color": {
+        "a": 1,
+        "rgb": 11657298
+      }
+    }
+  ],
+  "collapse-display": true,
+  "showArrow": true,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": true,
+  "centerStrength": 0.455078125,
+  "repelStrength": 10.6736111111111,
+  "linkStrength": 1,
+  "linkDistance": 392,
+  "scale": 0.451037794594155,
+  "close": true
+}
