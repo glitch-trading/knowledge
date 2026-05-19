@@ -35,7 +35,7 @@ Vectors, matrices, dot products, systems of equations. But also eigenvalue decom
 #### Core Probability
 Random variables (discrete and continuous), [[Probability Distributions]], [[Expected Value]], [[Variance]], standard deviation, probability density functions, [[Conditional Probability]], independence, [[Bayes' Theorem]]. The core question: "What are the odds, and are the odds in my favor?" Expected value is conviction, variance is risk. [[Bayes' Theorem]] is how you update beliefs with new information — this is conditional thinking applied everywhere.
 
-- **Resource:** [[Introduction to Probability — Blitzstein & Hwang]], chapters 1-6 (free Harvard PDF). Or [[Harvard Stat 110]] lectures on YouTube.
+- **Resource:** [[Introduction to Probability — Blitzstein & Hwang]], chapters 1-6 (free Harvard PDF). Or [[Harvard Stat 110]] lectures on YouTube. Then drill base-rate problems and indicator-variable tricks from the **MIT Quant Bible** (MIT Sloan Business Club PDF, sections 2-3) — the same patterns repeat across quant phone screens.
 - **Exercise:** Simulate 10,000 coin flips and verify the law of large numbers. Implement a Bayesian updater: start with a prior, feed in observations, watch the posterior converge.
 
 #### Key Distributions
@@ -101,7 +101,7 @@ This is what the [[Avellaneda-Stoikov]] paper models:
 - **[[Adverse Selection]]:** sometimes counterparties know something you don't. When informed traders hit your quotes, you're on the wrong side.
 - **The [[Spread]] as compensation:** bid-ask spread exists because market makers need payment for these risks.
 
-- **Resource:** [[Trading and Exchanges — Larry Harris]] chapters 7-13. Also: [[The Economics of the Dealer Function — Treynor]]. Search YouTube for Jane Street and Optiver talks on market making.
+- **Resource:** [[Trading and Exchanges — Larry Harris]] chapters 7-13. Also: [[The Economics of the Dealer Function — Treynor]]. Search YouTube for Jane Street and Optiver talks on market making. The **MIT Quant Bible** market-making chapter (Sloan Business Club PDF, section 6) covers the trader-side mental model — three determinants of a quote (theo, last traded, current position) and how to skew when inventory is non-flat.
 
 #### DEX and CEX Specifics
 Map general concepts to crypto venues:

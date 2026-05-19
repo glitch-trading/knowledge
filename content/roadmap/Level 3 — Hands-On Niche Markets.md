@@ -21,7 +21,7 @@ Linear regression, multiple regression, R², residuals, p-values. This is your p
 
 Deeply understand correlation ≠ causation. In markets, spurious correlations will bankrupt you.
 
-- **Resource:** [[Introduction to Statistical Learning (ISLR)]], chapters 2-4. Free PDF, excellent writing.
+- **Resource:** [[Introduction to Statistical Learning (ISLR)]], chapters 2-4. Free PDF, excellent writing. The **MIT Quant Bible** (MIT Sloan Business Club PDF) sections 4-5 condense the same material into an interview-prep view — closed-form `β̂ = (XᵀX)⁻¹Xᵀy`, hat matrix as projection, bias-variance vs. dimensionality reduction (Ridge / Lasso / PCA / LAR), and the econometrics view (selection bias, omitted-variables bias, CIA) — and walks through three case studies (NY housing, opera-house pricing, CitiBikes) end-to-end.
 
 #### [[Time Series Analysis]]
 Financial data is sequential. You need:
