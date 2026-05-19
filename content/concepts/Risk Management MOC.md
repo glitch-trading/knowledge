@@ -32,6 +32,10 @@ tags:
 - Bridge risk (cross-chain)
 - Regulatory risk
 
+## Execution Risk
+- [[Leg Risk]] — non-atomic multi-leg fills convert "guaranteed" arbs into directional positions
+- "Becoming exit liquidity" — copy-trading a faster arber means filling the *corrected* price
+
 ## Risk Aversion & Utility
 - [[Risk Aversion]]
 - [[Utility Theory]]

@@ -33,6 +33,8 @@ tags:
 - [[VWAP]]
 - [[Market Impact]]
 - Iceberg orders
+- [[Leg Risk]] — non-atomic multi-leg fills (cross-venue, multi-market, on-chain)
+- Atomicity spectrum — native atomic / bundle-atomic / portfolio-non-atomic / cross-chain
 
 ## MEV (Level 4)
 - [[MEV]]
