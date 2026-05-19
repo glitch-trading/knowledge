@@ -70,7 +70,29 @@ Most live-trading failures are operational, not analytical. The bot didn't have 
 - **Stage live exposure.** First-week sizes well below model. Compare live vs. paper P&L daily; investigate divergence beyond tolerance.
 - **Postmortems on every incident.** Kill-switch trigger, unexpected loss, missed fill — written up briefly with cause, fix, and preventative change. Cheap to do; compounds.
 
-### 7. Anti-patterns
+### 7. Tooling stack by shop size
+
+The operational checks above don't change with scale — only the implementations do. A small Alpaca bot needs the same discipline (kill switch, structured logs, off-host journal) as a co-located HFT engine. What changes is cost, latency budget, and which layer of the stack you build versus buy.
+
+**Solo / small shop.**
+- *Brokers / venues:* Interactive Brokers (TWS / IB Gateway via `ib_insync`), Alpaca (US equities, commission-free, no minimums), Tradier (options + equities API). Crypto: native exchange APIs via `ccxt`, dYdX / Hyperliquid SDKs.
+- *Data:* exchange websocket feeds; Polygon.io, Alpaca Data, Databento, or Kaiko for normalized history.
+- *Hosting:* a single cloud VPS (DigitalOcean, Linode, Vultr, AWS Lightsail) in a region near the venue. 10–100 ms round-trip is fine for non-HFT.
+- *Stack:* Python (`asyncio`, `pandas`, `ccxt`, `ib_insync`), Postgres / SQLite journal, Docker.
+
+**Mid-sized shop.**
+- *Brokers / venues:* prime-broker relationships (GSET, MSET, JPM e-Trading), FIX-protocol order routing, direct exchange API memberships where economically viable.
+- *Data:* commercial feeds (Refinitiv, Bloomberg B-PIPE, Polygon, Kaiko, Amberdata); kdb+/q or other columnar tick storage.
+- *Hosting:* dedicated bare-metal in exchange-proximate data centers (Equinix NY4 in Secaucus, LD4 in Slough, TY3 in Tokyo) with cross-connects to venues.
+- *Stack:* Python for research, Rust / Go / C++ for the hot path; Redis or shared-memory queues for IPC.
+
+**Institutional / HFT.**
+- *Brokers / venues:* direct exchange membership and in-house clearing. The firm *is* the broker.
+- *Data:* direct exchange protocols (Nasdaq TotalView-ITCH, NYSE OpenBook), FPGA-decoded market data.
+- *Hosting:* full co-location inside the exchange data center, kernel-bypass NICs (Solarflare, Mellanox), tuned Linux, sometimes FPGA / ASIC tick-to-trade paths. Microsecond and sub-microsecond budgets.
+- *Stack:* C++ / Rust hot path, custom OMS / EMS, Python reserved for research and offline analytics.
+
+### 8. Anti-patterns
 
 - Hardcoded credentials anywhere in source.
 - Single key with full account permissions.
