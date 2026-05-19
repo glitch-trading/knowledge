@@ -45,3 +45,5 @@ tags:
 - Order flow analysis
 - Kyle's lambda
 - Lead-lag relationships
+- [[VPIN]] — Volume-Synchronized Probability of Informed Trading
+- Effective spread (see [[Spread]])

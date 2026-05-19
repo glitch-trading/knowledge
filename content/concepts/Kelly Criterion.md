@@ -41,6 +41,12 @@ Kelly is the bridge between "having an edge" and "sizing your bets to exploit it
 
 The key insight: **the optimal bet size depends on both your edge AND your uncertainty about that edge.** When you're unsure of your edge (you always are), size down.
 
+**Uncertainty-adjusted "empirical" Kelly.** When edge is estimated from data, a defensible heuristic is to shrink the Kelly fraction by the coefficient of variation of the edge estimate across bootstrap / Monte Carlo paths:
+
+$$f_{\mathrm{emp}} = f^* \cdot (1 - \mathrm{CV}_{\text{edge}})$$
+
+where $\mathrm{CV}_{\text{edge}} = \sigma(\hat{\mu}) / \hat{\mu}$ over the resampled paths. This automatically collapses to a small fraction when the edge estimate is noisy and approaches full Kelly only when the estimate is stable. The principle generalizes the fractional-Kelly intuition — fixed fractions like 1/2 and 1/4 are crude approximations of this same idea.
+
 ## Key Equations
 
 **Binary Kelly:**
