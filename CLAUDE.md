@@ -31,3 +31,4 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 - Keep notes concise — no `## Notes`, `## Progress`, or `## Chapter Notes` sections
 - New concepts go in `concepts/`, books in `books/`, papers in `papers/`, courses in `courses/`
 - Check for orphan wikilinks after adding new references
+- Code snippets are welcome when they are short and directly illustrate the concept (e.g. estimating a transition matrix, fitting an HMM). Use fenced code blocks with a language tag. Skip code if the idea is purely conceptual or the snippet would be longer than the surrounding prose.
