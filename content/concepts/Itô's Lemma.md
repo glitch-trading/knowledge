@@ -17,7 +17,7 @@ In ordinary calculus, the chain rule for $f(t, x)$ gives $df = f_t \, dt + f_x \
 
 ## Why It Matters
 Itô's Lemma is used constantly in quantitative finance:
-- Deriving the Black-Scholes PDE from GBM
+- Deriving the [[Black-Scholes Equation]] from GBM
 - Solving the GBM SDE to get the explicit stock price formula (and the $\sigma^2/2$ correction)
 - Transforming value functions in the HJB equation (as done in Avellaneda-Stoikov Section 3)
 - Converting between different representations of stochastic processes
@@ -42,3 +42,5 @@ The $\frac{1}{2} \sigma^2 f_{XX}$ term is the Itô correction — absent in ordi
 - [[Itô Calculus]] — the framework from which Itô's Lemma is derived
 - [[Chain Rule]] — the ordinary calculus analog that Itô's Lemma generalizes
 - [[Stochastic Differential Equations]] — Itô's Lemma is the primary tool for manipulating SDEs
+- [[Black-Scholes Equation]] — the canonical application; derivation hinges on Itô applied to $V(S, t)$
+- [[Greeks]] — partial derivatives of $V$; their P&L expansion is Itô applied to the option's value

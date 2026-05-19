@@ -40,3 +40,10 @@ tags:
 ## Stress Testing
 - Historical crash scenarios (March 2020, May 2021, FTX Nov 2022)
 - Correlation breakdown under stress
+
+## Backtest Pitfalls
+- [[Overfitting]]
+- [[Survivorship Bias]]
+- [[Look-Ahead Bias]]
+- [[Hypothesis Testing]] — multiple-testing correction
+- [[The Deflated Sharpe Ratio — Bailey & López de Prado]]

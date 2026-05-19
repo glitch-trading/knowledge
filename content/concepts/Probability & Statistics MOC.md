@@ -28,6 +28,9 @@ tags:
 - [[Poisson Process]]
 - [[Brownian Motion]]
 
+## Statistical Inference
+- [[Hypothesis Testing]]
+
 ## Econometrics (Level 3)
 - [[Regression]]
 - [[Correlation]]

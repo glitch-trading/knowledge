@@ -18,6 +18,7 @@ tags:
 ## Linear Algebra
 - Vectors, matrices, dot products
 - Systems of equations
+- [[Principal Component Analysis]]
 
 ## Stochastic Calculus (Level 2)
 - [[Brownian Motion]]
@@ -26,6 +27,7 @@ tags:
 - [[Itô's Lemma]]
 - [[Stochastic Differential Equations]]
 - [[Feynman-Kac Theorem]]
+- [[Black-Scholes Equation]]
 
 ## Optimization & Control
 - [[Utility Theory]]
