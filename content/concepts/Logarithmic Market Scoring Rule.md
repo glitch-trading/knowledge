@@ -37,3 +37,6 @@ LMSR solves the liquidity bootstrapping problem in prediction markets — it alw
 - Prices are implied probabilities — connects to [[Conditional Probability]] and [[Bayes' Theorem]]
 - Bounded loss connects to [[Position Sizing]] and risk management
 - The softmax function appears in ML classifiers — same mathematical structure
+- The cost function $C(q) = b\ln\sum_i e^{q_i/b}$ is a scaled log-partition function — the same object that appears in the [[Maximum Entropy Principle]] derivation
+- [[Shannon Entropy]] and [[KL Divergence]] are the natural units for measuring price-implied uncertainty and trading edge on the resulting markets
+- [[Prediction Markets]] — venue category where LMSR is the canonical AMM

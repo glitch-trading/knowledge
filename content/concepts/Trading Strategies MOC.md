@@ -19,6 +19,14 @@ tags:
 - Prediction market ↔ spot/derivatives signals
 - Cross-venue information flow
 
+## Prediction Markets
+- [[Prediction Markets]] (Polymarket, Kalshi, Azuro)
+- [[Logarithmic Market Scoring Rule]] (LMSR AMM)
+- [[Interpreting Prediction Market Prices — Manski]] — price ≠ probability under realistic conditions
+- Edge measurement: [[KL Divergence]] in bits per trade
+- Signal fusion: [[Maximum Entropy Principle]]
+- Anomaly / insider-flow detection: rolling [[Shannon Entropy]] with $|dH/dt|$ threshold
+
 ## DeFi Strategies
 - Stablecoin DEX arb
 - [[Liquidation Botting]]

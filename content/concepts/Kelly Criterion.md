@@ -56,6 +56,14 @@ $$g(f) = p \ln(1 + bf) + q \ln(1 - f)$$
 
 Maximum at $f = f^*$.
 
+**Kelly growth = KL divergence (information-theoretic identity):**
+
+When the offered odds are fair against the *market-implied* probability $q$ (i.e., $b = q/(1-q)$) and the trader's true belief is $p$, the expected log-growth at full Kelly is exactly the [[KL Divergence]] of $p$ from $q$:
+
+$$g^* = D_{\mathrm{KL}}(p \,\|\, q) = p\log\!\frac{p}{q} + (1-p)\log\!\frac{1-p}{1-q}$$
+
+In bits with $\log_2$, nats with $\ln$. This is the result from Kelly (1956): edge-in-bits and expected-log-return-under-optimal-sizing are the same number. It is the most direct justification for measuring edge in $D_{\mathrm{KL}}$ on [[Prediction Markets]].
+
 ## Resources
 
 - [[A Man for All Markets — Ed Thorp]] — Thorp popularized Kelly for gambling and investing
@@ -68,3 +76,6 @@ Maximum at $f = f^*$.
 - [[Risk Aversion]] — Fractional Kelly maps to different levels of risk aversion
 - [[A Man for All Markets — Ed Thorp]] — Thorp applied Kelly from blackjack to Wall Street
 - [[Maximum Drawdown]] — Full Kelly produces ~50% expected max drawdown; fractional Kelly reduces this
+- [[KL Divergence]] — expected log-growth at Kelly equals $D_{\mathrm{KL}}$ of beliefs from market-implied probabilities
+- [[Shannon Entropy]] — the parent quantity from which $D_{\mathrm{KL}}$ and Kelly's growth-rate identity are derived
+- [[Prediction Markets]] — clean venue for applying the Kelly/KL identity since prices are explicit probabilities
