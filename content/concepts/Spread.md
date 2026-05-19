@@ -45,6 +45,12 @@ $$\text{relative spread} = \frac{p_{\text{ask}} - p_{\text{bid}}}{s} \quad \text
 
 $$\delta^* = \gamma \sigma^2 (T - t) + \frac{2}{\gamma} \ln\left(1 + \frac{\gamma}{k}\right)$$
 
+**Effective spread** (execution-quality measure for a single trade at price $p$ against contemporaneous mid $m$):
+
+$$\text{effective spread} = 2 \cdot |p - m|$$
+
+Aggregated across trades, the effective spread is the canonical microstructure metric for realized round-trip cost; it captures price impact that the quoted spread misses. A compressed effective spread typically signals low information asymmetry; an expanded effective spread relative to the quoted spread signals informed flow trading through the book — a common short-horizon signal alongside [[VPIN]].
+
 ## Resources
 - Avellaneda-Stoikov paper, Proposition 1
 - Harris, *Trading and Exchanges*, Chapter 6

@@ -47,7 +47,7 @@ This assumes i.i.d. returns (they aren't), but it's standard practice.
 **Information Ratio (relative Sharpe):**
 $$IR = \frac{R_p - R_b}{\sigma_{p-b}}$$
 
-Excess return relative to a benchmark, divided by tracking error.
+Excess return relative to a benchmark, divided by tracking error. See [[Information Ratio]] for the full treatment and its decomposition via the [[Fundamental Law of Active Management]].
 
 **Ex-ante Sharpe (from Kelly):**
 $$SR = \frac{\mu}{\sigma}$$
@@ -65,3 +65,5 @@ Directly connects to [[Kelly Criterion]]: $f^* = \mu / \sigma^2 = SR / \sigma$.
 - [[Sortino Ratio]] — Downside-only version, better for asymmetric returns
 - [[Variance]] — Sharpe uses total variance; this penalizes upside
 - [[The Deflated Sharpe Ratio — Bailey & López de Prado]] — Corrects Sharpe for multiple testing and [[Overfitting]]
+- [[Information Ratio]] — benchmark-relative cousin; the standard metric for active management
+- [[Information Coefficient]] — signal-level analogue (per-forecast skill)

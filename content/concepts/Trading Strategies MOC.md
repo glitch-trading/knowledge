@@ -31,9 +31,16 @@ tags:
 - Funding rate harvesting
 - Basis trading (perp vs spot)
 
+## Alpha Construction & Combination
+- [[Information Coefficient]]
+- [[Information Ratio]]
+- [[Fundamental Law of Active Management]] (IR ≈ IC · √breadth)
+- [[Alpha Combination]] — weighting many weak signals into a single forecast
+- [[Fama-French Factor Model]] — canonical multi-factor decomposition
+
 ## Risk & Sizing
-- [[Kelly Criterion]]
+- [[Kelly Criterion]] (incl. uncertainty-adjusted empirical Kelly)
 - [[Position Sizing]]
-- [[Sharpe Ratio]] / [[Sortino Ratio]]
+- [[Sharpe Ratio]] / [[Sortino Ratio]] / [[Information Ratio]]
 - [[Maximum Drawdown]]
 - [[Overfitting]] and backtest pitfalls
