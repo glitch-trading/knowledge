@@ -138,6 +138,12 @@ Discounted prices are martingales under the risk-neutral measure. Understand the
 - Bayesian updating of strategy parameters as market regime changes
 - Bayesian portfolio optimization (Black-Litterman model)
 
+#### [[Hidden Markov Models]]
+- The latent-regime extension of [[Regime Switching]]: the regime is unobservable and inferred jointly with the regime-conditional return distributions from data alone — no manual labeling.
+- Three canonical problems: evaluation (forward algorithm), decoding (Viterbi), learning (Baum-Welch / EM).
+- Emission design dominates. Returns alone are weak; returns combined with realized vol, credit spreads, and VIX term-structure slope are where edge actually comes from.
+- Baum-Welch is non-convex — always run multiple random restarts and keep the highest-likelihood fit.
+
 #### Kalman Filters
 - State-space models for tracking hidden variables (true price, true spread, true volatility)
 - Application: estimate the "true" fair value of an asset given noisy observations from multiple venues

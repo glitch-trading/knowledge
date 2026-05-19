@@ -24,6 +24,7 @@ tags:
 ## Stochastic Processes
 - [[Random Walk]]
 - [[Markov Property]]
+- [[Markov Chain]]
 - [[Poisson Process]]
 - [[Brownian Motion]]
 
@@ -37,6 +38,10 @@ tags:
 - [[ARIMA]]
 - [[Cointegration]]
 - [[GARCH]]
+
+## Regime Models (Level 5+)
+- [[Regime Switching]]
+- [[Hidden Markov Models]]
 
 ## Advanced (Level 6)
 - Bayesian methods

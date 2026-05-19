@@ -54,6 +54,7 @@ This bridges basic probability into the continuous-time world:
 
 - **[[Random Walk]]** — a sequence of random steps. The discrete version of what stock prices do. Simulate one in code.
 - **[[Markov Property]]** — the future depends only on the present state, not the path taken to get there. Most financial models assume this.
+- **[[Markov Chain]]** — the discrete companion to the property: a transition matrix $\mathbf{P}$ over a finite state space. MLE is "count transitions, normalize rows." $n$-step forecasts collapse to $\mathbf{P}^n$ (Chapman-Kolmogorov). The stationary distribution $\boldsymbol\pi$ from $\boldsymbol\pi\mathbf{P} = \boldsymbol\pi$ is the long-run baseline. Foundation for [[Regime Switching]] in Level 5 and [[Hidden Markov Models]] in Level 6.
 - **[[Poisson Process]]** — events arriving randomly at rate λ. Understand intensity, inter-arrival times ([[Exponential Distribution]]), and how to model "orders arrive at rate λ(δ)."
 - **[[Brownian Motion]]** (conceptual) — the continuous limit of a [[Random Walk]]. The mid-price in [[Avellaneda-Stoikov]] follows `dS = σdW`. For now, understand it intuitively as "a continuous random wiggle with volatility σ."
 
