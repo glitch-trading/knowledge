@@ -19,6 +19,11 @@ tags:
 - Prediction market ↔ spot/derivatives signals
 - Cross-venue information flow
 
+## Strategy Archetypes
+- [[Mean Reversion]]
+- Trend following / momentum
+- Breakout vs. range-extremity fade (HTF-context dependent)
+
 ## DeFi Strategies
 - Stablecoin DEX arb
 - [[Liquidation Botting]]
@@ -37,3 +42,8 @@ tags:
 - [[Sharpe Ratio]] / [[Sortino Ratio]]
 - [[Maximum Drawdown]]
 - [[Overfitting]] and backtest pitfalls
+
+## Process & Execution Discipline
+- [[Trade Journaling]]
+- [[Trading Psychology]]
+- [[Market Profile]] (TPO — trade location & confluence)
