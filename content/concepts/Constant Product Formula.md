@@ -50,6 +50,43 @@ $$\text{Impact} = \frac{\Delta x}{x + \Delta x}$$
 **Arbitrage trade size to move price from $P_0$ to $P_1$:**
 $$\Delta x = x \left(\sqrt{\frac{P_1}{P_0}} - 1\right)$$
 
+## Swap in Code
+
+A Uniswap v2-style swap (constant product, 0.30% fee):
+
+```python
+def swap_x_for_y(x: float, y: float, dx: float, fee: float = 0.003) -> tuple[float, float, float]:
+    """Return (dy_out, x_after, y_after) for swapping dx of token X into the pool."""
+    dx_eff = dx * (1 - fee)
+    dy = (y * dx_eff) / (x + dx_eff)
+    return dy, x + dx, y - dy
+
+# 1,000 ETH / 3,000,000 USDC pool. Mid price = 3,000 USDC/ETH.
+dy, x1, y1 = swap_x_for_y(x=1_000, y=3_000_000, dx=10)
+print(f"sold 10 ETH, got {dy:,.2f} USDC")             # 29,614.74 USDC
+print(f"realized price {dy / 10:,.2f} USDC/ETH")      # 2,961.47 (vs. 3,000 mid)
+print(f"new mid price  {y1 / x1:,.2f} USDC/ETH")      # 2,940.98
+```
+
+Two effects show up at once: the **fee** (paid even at infinitesimal size) and the **price impact** (the realized price is below the post-trade mid, which is below the pre-trade mid).
+
+## Swap Flow
+
+```mermaid
+sequenceDiagram
+  participant T as Trader
+  participant P as Pool (x · y = k)
+  participant A as Arbitrageur
+  T->>P: send Δx of X
+  P->>P: invariant: (x+Δx)(y-Δy) = k
+  P->>T: send Δy of Y, mid price now y/x lower
+  Note over P: pool price &lt; external CEX price
+  A->>P: send Δy' of Y to rebalance
+  P->>A: send Δx' of X; price re-aligns
+```
+
+The arbitrageur's existence is what guarantees the pool price tracks the broader market — without them, the CPMM is just a price oracle for the last trader.
+
 ## Resources
 
 - Uniswap v2 Whitepaper

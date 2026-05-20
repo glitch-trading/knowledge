@@ -37,6 +37,42 @@ $$S(t) = S(0) \exp\left[\left(\mu - \frac{\sigma^2}{2}\right)t + \sigma W(t)\rig
 
 Note the $-\sigma^2/2$ correction — this is the Itô correction, absent in ordinary calculus.
 
+## Simulation in Code
+
+Sample paths from the *exact* solution (no Euler discretization error):
+
+```python
+import numpy as np
+
+def gbm_paths(S0: float, mu: float, sigma: float,
+              T: float, n_steps: int, n_paths: int, seed: int = 0) -> np.ndarray:
+    rng = np.random.default_rng(seed)
+    dt = T / n_steps
+    Z = rng.standard_normal((n_paths, n_steps))
+    increments = (mu - 0.5 * sigma**2) * dt + sigma * np.sqrt(dt) * Z
+    log_S = np.log(S0) + np.cumsum(increments, axis=1)
+    log_S = np.concatenate([np.full((n_paths, 1), np.log(S0)), log_S], axis=1)
+    return np.exp(log_S)                              # shape: (n_paths, n_steps + 1)
+```
+
+The Itô correction is empirically visible: the *median* path drifts at $\mu - \sigma^2/2$, while the *mean* drifts at $\mu$.
+
+```python
+S = gbm_paths(S0=100, mu=0.10, sigma=0.30, T=1.0, n_steps=252, n_paths=50_000)
+print(np.log(S[:, -1] / S[:, 0]).mean())              # ≈ μ − σ²/2  = 0.055
+print(np.log(S[:, -1].mean() / S[0, 0]))              # ≈ μ          = 0.10
+```
+
+That gap is why "average return" and "compound growth rate" are not the same number — volatility is a tax on geometric growth.
+
+## Lognormal Cross-Section
+
+```mermaid
+flowchart LR
+  A["log S_t ~ Normal<br/>mean = log S_0 + (μ − σ²/2)t<br/>var = σ²t"] --> B["S_t = exp(log S_t)"]
+  B --> C["S_t ~ Lognormal<br/>always &gt; 0, right-skewed"]
+```
+
 ## Resources
 - Shreve, *Stochastic Calculus for Finance II*, Chapter 4
 - Avellaneda-Stoikov paper, Section 2 (assumes GBM for midprice)

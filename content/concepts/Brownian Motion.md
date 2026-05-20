@@ -55,6 +55,42 @@ Simulation:
 
 $$W_{t+\Delta t} = W_t + \sqrt{\Delta t}\, Z, \quad Z \sim \mathcal{N}(0, 1)$$
 
+## Simulation in Code
+
+A standard Brownian path on $[0, T]$ with $N$ steps:
+
+```python
+import numpy as np
+
+def brownian_path(T: float, n_steps: int, n_paths: int = 1, seed: int = 0) -> np.ndarray:
+    rng = np.random.default_rng(seed)
+    dt = T / n_steps
+    dW = rng.normal(0.0, np.sqrt(dt), size=(n_paths, n_steps))
+    W = np.concatenate([np.zeros((n_paths, 1)), np.cumsum(dW, axis=1)], axis=1)
+    return W                                          # shape: (n_paths, n_steps + 1)
+```
+
+Two empirical sanity checks that anchor the theory:
+
+```python
+W = brownian_path(T=1.0, n_steps=10_000, n_paths=5_000)
+print(W[:, -1].var())                                 # ≈ T = 1.0  (Var(W_T) = T)
+print(np.sum(np.diff(W[0]) ** 2))                     # ≈ T = 1.0  (quadratic variation)
+```
+
+The second line is the engine of stochastic calculus: along *any* path, the sum of squared increments converges to $T$, not to zero. That is $(dW)^2 = dt$.
+
+## The Random Walk → BM Limit
+
+```mermaid
+flowchart LR
+  A["Symmetric ±1 random walk<br/>step = 1, time = 1"] --> B["Rescale:<br/>step = √Δt, time = Δt"]
+  B --> C["Δt → 0<br/>(Donsker's theorem)"]
+  C --> D["Brownian motion W_t<br/>continuous, Gaussian increments"]
+```
+
+This is why $\sqrt{\Delta t}$ — not $\Delta t$ — is the right scaling: variance must be preserved as the step size shrinks.
+
 ## Resources
 
 - *Stochastic Calculus for Finance II* by Shreve — rigorous construction and properties
