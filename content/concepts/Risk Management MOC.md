@@ -40,3 +40,9 @@ tags:
 ## Stress Testing
 - Historical crash scenarios (March 2020, May 2021, FTX Nov 2022)
 - Correlation breakdown under stress
+
+## Execution & Process Discipline
+- [[Trade Journaling]]
+- [[Trading Psychology]]
+- Macro / high-impact data event awareness (avoid open trades into known releases)
+- Pre-trade devil's advocate (list reasons *not* to take the trade)
