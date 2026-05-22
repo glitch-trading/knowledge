@@ -31,7 +31,9 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 - Keep notes concise — no `## Notes`, `## Progress`, or `## Chapter Notes` sections
 - New concepts go in `concepts/`, books in `books/`, papers in `papers/`, courses in `courses/`
 - Check for orphan wikilinks after adding new references
-- Code snippets are welcome when they are short and directly illustrate the concept (e.g. estimating a transition matrix, fitting an HMM). Use fenced code blocks with a language tag. Skip code if the idea is purely conceptual or the snippet would be longer than the surrounding prose.
+- Always add a short, runnable code snippet (fenced, language-tagged) when the concept has a computable side — pricing, estimation, simulation, sizing, signal construction. The snippet should illustrate the equations directly above it, not duplicate them. Skip code only when the idea is purely conceptual or the snippet would be longer than the surrounding prose.
+- Always add a mermaid diagram when the concept involves a flow, sequence, state machine, dependency graph, or visual structure (e.g., sandwich attacks, MEV pipelines, regime transitions, derivation chains). Skip diagrams when the relationship is already obvious from prose or a single equation.
+- When you add code, run it locally and reflect the actual output in inline comments — never invent numbers.
 
 ## Contribution workflow
 

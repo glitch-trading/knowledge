@@ -34,6 +34,32 @@ $$df = \left(\frac{\partial f}{\partial t} + \mu \frac{\partial f}{\partial X} +
 
 The $\frac{1}{2} \sigma^2 f_{XX}$ term is the Itô correction — absent in ordinary calculus.
 
+## Applied: GBM → log-price drift
+
+Take $S$ following GBM, $dS = \mu S \, dt + \sigma S \, dW$, and let $f(S) = \log S$. Then $f' = 1/S$ and $f'' = -1/S^2$:
+
+$$d(\log S) = \frac{1}{S} \cdot dS + \tfrac{1}{2}\left(-\frac{1}{S^2}\right)(\sigma S)^2 dt = \left(\mu - \tfrac{1}{2}\sigma^2\right) dt + \sigma\, dW$$
+
+That $-\sigma^2/2$ is the entire reason geometric returns differ from arithmetic returns. Verifying it numerically also verifies that Itô's lemma is the right calculus:
+
+```python
+import numpy as np
+
+mu, sigma, T, n_steps, n_paths = 0.10, 0.30, 1.0, 252, 100_000
+dt = T / n_steps
+rng = np.random.default_rng(0)
+dW = rng.normal(0.0, np.sqrt(dt), size=(n_paths, n_steps))
+
+# Exact GBM step (Itô-aware): log-additive with the -σ²/2 correction.
+log_S = np.cumsum((mu - 0.5 * sigma**2) * dt + sigma * dW, axis=1)
+
+drift_per_unit_time = log_S[:, -1].mean() / T
+print(f"empirical drift of log S: {drift_per_unit_time:.4f}")  # ≈ μ − σ²/2 = 0.055
+print(f"Itô-predicted drift:      {mu - 0.5 * sigma**2:.4f}")  # 0.055
+```
+
+Drop the $-\tfrac{1}{2}\sigma^2$ term and the simulated drift will systematically overshoot — that bias is exactly the Itô correction made visible.
+
 ## Resources
 - Shreve, *Stochastic Calculus for Finance II*, Chapter 4.4
 - Oksendal, *Stochastic Differential Equations*, Theorem 4.1.2

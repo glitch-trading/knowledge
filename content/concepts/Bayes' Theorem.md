@@ -51,6 +51,43 @@ $$\frac{P(A \mid B)}{P(\neg A \mid B)} = \frac{P(B \mid A)}{P(B \mid \neg A)} \c
 
 $$\text{posterior odds} = \text{likelihood ratio} \times \text{prior odds}$$
 
+## Worked Example: Informed-Trader Posterior
+
+A market maker quotes a two-sided book. Suppose 20% of incoming orders come from informed traders ($I$) who know the true price direction; the rest are uninformed. An informed trader buys 80% of the time when fair value is above mid; an uninformed trader buys 50% of the time regardless. We just observed a buy ($B$) at the offer. What is $P(I \mid B)$?
+
+```python
+p_I        = 0.20                                     # prior: 20% informed
+p_B_given_I = 0.80                                    # informed buys 80% when overvalued
+p_B_given_U = 0.50                                    # uninformed: 50/50
+
+p_B = p_B_given_I * p_I + p_B_given_U * (1 - p_I)     # marginal: 0.56
+p_I_given_B = (p_B_given_I * p_I) / p_B               # posterior
+
+print(f"P(informed | buy) = {p_I_given_B:.3f}")       # 0.286
+```
+
+The posterior jumps from 20% to 28.6%, and the maker should widen the offer or skew the mid down: each buy is mild evidence that fair value sits above the current quote.
+
+The same calculation done one buy at a time *is* the Glosten-Milgrom market-making model. Spread is the maker's compensation for being repeatedly Bayes-updated by informed flow — see [[Adverse Selection]].
+
+## Sequential Updating
+
+Each new observation $B_n$ updates the posterior from the previous round:
+
+```python
+def update(prior: float, p_B_given_H: float, p_B_given_not_H: float) -> float:
+    num = p_B_given_H * prior
+    den = num + p_B_given_not_H * (1 - prior)
+    return num / den
+
+posterior = 0.20
+for _ in range(5):                                    # five buys in a row
+    posterior = update(posterior, 0.80, 0.50)
+print(f"P(informed | 5 buys) = {posterior:.3f}")      # 0.724
+```
+
+Five consecutive buys drag the posterior from 20% to ~72%. Order flow autocorrelation is informative because of exactly this dynamic.
+
 ## Resources
 
 - *Probability Theory: The Logic of Science* by E.T. Jaynes — the Bayesian bible
