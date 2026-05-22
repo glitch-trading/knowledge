@@ -41,8 +41,11 @@ Priority-ordered reading list. Each entry links to its own note for reading stat
 | 17 | [[Fooled by Randomness — Nassim Taleb]] | Distinguishing signal from noise | 5 |
 | 18 | [[The Alchemy of Finance — George Soros]] | Reflexivity, macro thinking | 5 |
 | 19 | [[The Man Who Solved the Market — Gregory Zuckerman]] | Jim Simons, Renaissance Technologies, quant culture | — |
-| 20 | [[Market Microstructure Theory — Maureen O'Hara]] | Academic microstructure | 6 |
-| 21 | [[A First Course in Stochastic Calculus — Louis-Pierre Arguin]] | Gentler alternative to Shreve | 2 |
+| 20 | [[The Quants — Scott Patterson]] | Industry narrative, the 2007 quant crisis | — |
+| 21 | [[Inside the Black Box — Rishi Narang]] | Plain-English structural tour of how quant funds are built | — |
+| 22 | [[Market Microstructure Theory — Maureen O'Hara]] | Academic microstructure | 6 |
+| 23 | [[A First Course in Stochastic Calculus — Louis-Pierre Arguin]] | Gentler alternative to Shreve | 2 |
+| 24 | [[The Elements of Statistical Learning — Hastie, Tibshirani & Friedman]] | Rigorous ML reference, free Stanford PDF | 6 |
 
 ## Supplementary
 
@@ -52,8 +55,9 @@ Priority-ordered reading list. Each entry links to its own note for reading stat
 
 ## Interview Prep
 
-- Zhou, "Practical Guide to Quantitative Finance Interviews" (the "Green Book") — 200+ real problems
-- Crack, "Heard on the Street" — classic quant interview prep
-- Joshi, "Quant Job Interview Questions" — broader question set
+- [[A Practical Guide to Quantitative Finance Interviews — Xinfeng Zhou]] — the "Green Book," 200+ real problems
+- [[Heard on the Street — Timothy Crack]] — classic quant interview brainteasers
+- [[Quant Job Interview Questions and Answers — Mark Joshi]] — derivatives-pricing and C++ flavor
+- [[Mental Math]] — speed-arithmetic drill for trader interviews
 - [QuantGuide.io](https://quantguide.io) — LeetCode for quants
 - [Brainstellar](https://brainstellar.com) — probability and logic puzzles

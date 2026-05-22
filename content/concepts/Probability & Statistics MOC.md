@@ -28,6 +28,9 @@ tags:
 - [[Poisson Process]]
 - [[Brownian Motion]]
 
+## Statistical Inference
+- [[Hypothesis Testing]]
+
 ## Econometrics (Level 3)
 - [[Regression]]
 - [[Correlation]]
@@ -45,6 +48,7 @@ tags:
 - [[Maximum Entropy Principle]]
 - Cross-entropy (loss = $H(p) + D_{\mathrm{KL}}(p \,\|\, q)$)
 - Mutual information (feature selection without assuming linearity)
+
 
 ## Regime Models (Level 5+)
 - [[Regime Switching]]

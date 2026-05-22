@@ -57,3 +57,10 @@ tags:
 - [[Trading Psychology]]
 - Macro / high-impact data event awareness (avoid open trades into known releases)
 - Pre-trade devil's advocate (list reasons *not* to take the trade)
+
+## Backtest Pitfalls
+- [[Overfitting]]
+- [[Survivorship Bias]]
+- [[Look-Ahead Bias]]
+- [[Hypothesis Testing]] — multiple-testing correction
+- [[The Deflated Sharpe Ratio — Bailey & López de Prado]]

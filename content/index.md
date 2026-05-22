@@ -33,6 +33,7 @@ Quantitative trading, statistical arbitrage, and market making — from zero to 
 - [[Trading Strategies MOC]] — arbitrage types, stat arb, funding rate, MEV
 - [[Risk Management MOC]] — position sizing, risk metrics, crypto-specific risks
 - [[Infrastructure MOC]] — data pipelines, execution systems, monitoring
+- [[AI in Trading MOC]] — LLMs, RAG, multi-agent systems in quant research
 
 ## Contributing
 
