@@ -37,3 +37,7 @@ LMSR solves the liquidity bootstrapping problem in prediction markets — it alw
 - Prices are implied probabilities — connects to [[Conditional Probability]] and [[Bayes' Theorem]]
 - Bounded loss connects to [[Position Sizing]] and risk management
 - The softmax function appears in ML classifiers — same mathematical structure
+- The cost function $C(\mathbf{q}) = b\log\sum_i e^{q_i/b}$ is a scaled log-partition function — the same object that appears in the [[Maximum Entropy Principle]] derivation, and it generates the [[Bregman Divergence]] used for arbitrage-free price projection in [[Combinatorial Prediction Markets]] (on the simplex this Bregman divergence reduces to KL)
+- [[Frank-Wolfe Algorithm]] (barrier variant) is the standard optimizer used to project onto the marginal polytope under LMSR pricing without explicit polytope enumeration
+- [[Shannon Entropy]] and [[KL Divergence]] are the natural units for measuring price-implied uncertainty and trading edge on the resulting markets
+- [[Prediction Markets]] — venue category where LMSR is the canonical AMM

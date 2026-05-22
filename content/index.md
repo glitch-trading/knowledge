@@ -23,6 +23,7 @@ Quantitative trading, statistical arbitrage, and market making — from zero to 
 - [[Essential Bookshelf]]
 - [[Key Papers]]
 - [[Core Principles]]
+- [[Quant Firms & Practice Resources]]
 
 ## Maps of Content
 

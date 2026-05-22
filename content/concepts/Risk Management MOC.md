@@ -17,6 +17,8 @@ tags:
 - [[Maximum Drawdown]]
 - [[Sharpe Ratio]]
 - [[Sortino Ratio]]
+- [[Information Ratio]] — benchmark-relative, the standard active-management metric
+- [[Information Coefficient]] — signal-level skill, feeds the [[Fundamental Law of Active Management]]
 
 ## Fat Tails & Extreme Events
 - [[Fat Tails]]
@@ -32,6 +34,10 @@ tags:
 - Bridge risk (cross-chain)
 - Regulatory risk
 
+## Execution Risk
+- [[Leg Risk]] — non-atomic multi-leg fills convert "guaranteed" arbs into directional positions
+- "Becoming exit liquidity" — copy-trading a faster arber means filling the *corrected* price
+
 ## Risk Aversion & Utility
 - [[Risk Aversion]]
 - [[Utility Theory]]
@@ -40,3 +46,14 @@ tags:
 ## Stress Testing
 - Historical crash scenarios (March 2020, May 2021, FTX Nov 2022)
 - Correlation breakdown under stress
+
+## Operational Risk Controls
+- [[Kill Switch]] — automated halt on drawdown / loss streaks / stale data / behavioral divergence
+- [[Paper Trading]] — validation layer that catches operational bugs before live capital sees them
+- [[Trading Bot Operations]] — the production checklist that prevents most "the strategy was fine but…" losses
+
+## Execution & Process Discipline
+- [[Trade Journaling]]
+- [[Trading Psychology]]
+- Macro / high-impact data event awareness (avoid open trades into known releases)
+- Pre-trade devil's advocate (list reasons *not* to take the trade)

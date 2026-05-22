@@ -52,7 +52,7 @@ How to read and interpret an SDE. What it means for a process to "solve" an SDE.
 - The ansatz trick (equation 14): guess the solution form, substitute back, get a simpler equation.
 - First-order conditions: set derivatives to zero for optimal δa and δb → equations 18-19.
 
-- **Resource:** [[Convex Optimization — Boyd & Vandenberghe]], chapters 1-5 (free Stanford PDF) for the optimization foundations. [[Algorithmic and High-Frequency Trading — Cartea et al.]], chapters on optimal control. Or [[Continuous-time Stochastic Control and Optimization — Pham]], chapters 1-3.
+- **Resource:** [[Convex Optimization — Boyd & Vandenberghe]], chapters 1-5 (free Stanford PDF) for the optimization foundations. [[Algorithmic and High-Frequency Trading — Cartea et al.]], chapters on optimal control. Or [[Continuous-time Stochastic Control and Optimization — Pham]], chapters 1-3. For interview-style market-making cases that translate this theory into "where do I quote, given my position?" reasoning, work through the **MIT Quant Bible** (MIT Sloan Business Club PDF) section 6 cases (sports betting, country population, trade-or-tighten).
 - **Exercise:** Implement gradient descent from scratch and minimize the Rosenbrock function. Then do portfolio optimization with `cvxpy` including transaction cost constraints.
 
 ### 2.3 Reading the [[Avellaneda-Stoikov]] Paper

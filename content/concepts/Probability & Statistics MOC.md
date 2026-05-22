@@ -39,6 +39,13 @@ tags:
 - [[Cointegration]]
 - [[GARCH]]
 
+## Information Theory
+- [[Shannon Entropy]]
+- [[KL Divergence]]
+- [[Maximum Entropy Principle]]
+- Cross-entropy (loss = $H(p) + D_{\mathrm{KL}}(p \,\|\, q)$)
+- Mutual information (feature selection without assuming linearity)
+
 ## Regime Models (Level 5+)
 - [[Regime Switching]]
 - [[Hidden Markov Models]]

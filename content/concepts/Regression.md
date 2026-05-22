@@ -33,7 +33,7 @@ Multiple predictors. Each $\beta_i$ tells you the effect of $X_i$ on $Y$, holdin
 
 - **Alpha modeling**: Most quantitative trading signals are discovered and validated through regression. "Does this factor predict future returns?"
 - **Hedging**: Regression tells you the hedge ratio. If stock Y has $\beta = 0.8$ against the market, you need to short 0.8 units of market exposure to hedge.
-- **Risk decomposition**: Factor regressions (Fama-French, Barra) decompose returns into systematic factors and idiosyncratic alpha.
+- **Risk decomposition**: Factor regressions ([[Fama-French Factor Model|Fama-French]], Barra) decompose returns into systematic factors and idiosyncratic alpha.
 - **Danger of overfitting**: With enough variables, you can fit any historical data perfectly. Out-of-sample, it will fail catastrophically. Regularization (Ridge, Lasso) and cross-validation are essential.
 
 ## Key Equations
@@ -58,6 +58,7 @@ $$SE(\hat{\beta}) = \sqrt{\hat{\sigma}^2 (X^T X)^{-1}}$$
 - Wooldridge — *Introductory Econometrics* (gold standard textbook)
 - James, Witten, Hastie, Tibshirani — *An Introduction to Statistical Learning* (ISL)
 - Angrist & Pischke — *Mostly Harmless Econometrics* (causal inference focus)
+- **MIT Quant Bible** (MIT Sloan Business Club PDF) §4 — geometric view of OLS as projection (`ŷ = X(XᵀX)⁻¹Xᵀy` is the hat matrix); multivariate regression as successive orthonormalization; bias-variance vs. dimensionality reduction comparison (subset selection / Ridge / Lasso / LAR / PCR); and the omitted-variables-bias formula `β_short − β_long = π₁ × γ` used qualitatively even when the omitted variable is unobserved.
 
 ## Connections
 
@@ -65,3 +66,5 @@ $$SE(\hat{\beta}) = \sqrt{\hat{\sigma}^2 (X^T X)^{-1}}$$
 - [[Logistic Regression]] — Extension for binary outcomes
 - [[Cointegration]] — Regression of non-stationary series on each other (Engle-Granger method)
 - [[Time Series Analysis]] — Regression with lagged variables and autocorrelated errors
+- [[Fama-French Factor Model]] — canonical regression-based factor decomposition
+- [[Alpha Combination]] — the independent-edge step is a regression of signal expected returns on shared variance
