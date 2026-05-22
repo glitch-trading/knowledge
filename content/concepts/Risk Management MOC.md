@@ -17,6 +17,8 @@ tags:
 - [[Maximum Drawdown]]
 - [[Sharpe Ratio]]
 - [[Sortino Ratio]]
+- [[Information Ratio]] — benchmark-relative, the standard active-management metric
+- [[Information Coefficient]] — signal-level skill, feeds the [[Fundamental Law of Active Management]]
 
 ## Fat Tails & Extreme Events
 - [[Fat Tails]]
