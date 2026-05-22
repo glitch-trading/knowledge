@@ -62,3 +62,6 @@ When $\rho_{12} < 1$, $\sigma_p < w_1 \sigma_1 + w_2 \sigma_2$. Free lunch.
 - [[Sharpe Ratio]] — The tangency portfolio maximizes Sharpe
 - [[Correlation]] — The key input that makes diversification work
 - [[Variance]] — Portfolio variance depends on covariance structure, not just individual variances
+- [[Principal Component Analysis]] — Used to regularize the covariance matrix and reduce dimensionality
+- [[CAPM]] — Equilibrium consequence of universal mean-variance optimization
+- [[Fama-French Three-Factor Model]] — Multi-factor extension used in alpha attribution

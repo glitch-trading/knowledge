@@ -41,6 +41,12 @@ Kelly is the bridge between "having an edge" and "sizing your bets to exploit it
 
 The key insight: **the optimal bet size depends on both your edge AND your uncertainty about that edge.** When you're unsure of your edge (you always are), size down.
 
+**Uncertainty-adjusted "empirical" Kelly.** When edge is estimated from data, a defensible heuristic is to shrink the Kelly fraction by the coefficient of variation of the edge estimate across bootstrap / Monte Carlo paths:
+
+$$f_{\mathrm{emp}} = f^* \cdot (1 - \mathrm{CV}_{\text{edge}})$$
+
+where $\mathrm{CV}_{\text{edge}} = \sigma(\hat{\mu}) / \hat{\mu}$ over the resampled paths. This automatically collapses to a small fraction when the edge estimate is noisy and approaches full Kelly only when the estimate is stable. The principle generalizes the fractional-Kelly intuition — fixed fractions like 1/2 and 1/4 are crude approximations of this same idea.
+
 ## Key Equations
 
 **Binary Kelly:**
@@ -55,6 +61,14 @@ Where $\mu$ = expected excess return, $\sigma^2$ = variance of returns. This say
 $$g(f) = p \ln(1 + bf) + q \ln(1 - f)$$
 
 Maximum at $f = f^*$.
+
+**Kelly growth = KL divergence (information-theoretic identity):**
+
+When the offered odds are fair against the *market-implied* probability $q$ (i.e., $b = q/(1-q)$) and the trader's true belief is $p$, the expected log-growth at full Kelly is exactly the [[KL Divergence]] of $p$ from $q$:
+
+$$g^* = D_{\mathrm{KL}}(p \,\|\, q) = p\log\!\frac{p}{q} + (1-p)\log\!\frac{1-p}{1-q}$$
+
+In bits with $\log_2$, nats with $\ln$. This is the result from Kelly (1956): edge-in-bits and expected-log-return-under-optimal-sizing are the same number. It is the most direct justification for measuring edge in $D_{\mathrm{KL}}$ on [[Prediction Markets]].
 
 ## Why Overbetting Kills
 
@@ -109,3 +123,6 @@ Full Kelly compounds spectacularly *and* spends most of its life near a path-wor
 - [[Risk Aversion]] — Fractional Kelly maps to different levels of risk aversion
 - [[A Man for All Markets — Ed Thorp]] — Thorp applied Kelly from blackjack to Wall Street
 - [[Maximum Drawdown]] — Full Kelly produces ~50% expected max drawdown; fractional Kelly reduces this
+- [[KL Divergence]] — expected log-growth at Kelly equals $D_{\mathrm{KL}}$ of beliefs from market-implied probabilities
+- [[Shannon Entropy]] — the parent quantity from which $D_{\mathrm{KL}}$ and Kelly's growth-rate identity are derived
+- [[Prediction Markets]] — clean venue for applying the Kelly/KL identity since prices are explicit probabilities

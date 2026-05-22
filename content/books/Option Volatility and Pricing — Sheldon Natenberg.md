@@ -10,6 +10,8 @@ tags:
 level: 2, 4
 topics:
   - "[[Geometric Brownian Motion]]"
+  - "[[Greeks]]"
+  - "[[Implied Volatility]]"
 ---
 
 **The practical companion to Hull. How traders actually think about options and volatility.**
@@ -22,14 +24,17 @@ For crypto/DeFi, understanding vol is critical: LP positions are short vol, fund
 
 ## Key Takeaways
 
-- **Volatility is the key variable.** Everything in options comes back to vol. Historical vol tells you what happened, implied vol tells you what the market expects. The gap between them is where vol traders find edge.
-- **Trader's Greeks.** Practical understanding of how to use Delta, Gamma, Theta, Vega to manage a book — not just formulas but intuition for what each means for P&L.
+- **Volatility is the key variable.** Everything in options comes back to vol. Historical vol tells you what happened, [[Implied Volatility|implied vol]] tells you what the market expects. The gap between them is where vol traders find edge.
+- **Trader's [[Greeks]].** Practical understanding of how to use Delta, Gamma, Theta, Vega to manage a book — not just formulas but intuition for what each means for P&L.
 - **Spreads and strategies.** Vertical, horizontal, diagonal spreads, straddles, strangles — each expresses a different view on direction and vol.
-- **Vol surface.** The smile, skew, and term structure of implied volatility — why it exists and what it tells you about market expectations.
+- **Vol surface.** The smile, skew, and term structure of [[Implied Volatility]] — why it exists and what it tells you about market expectations.
 
 
 ## Connections
 
 - [[Options, Futures, and Other Derivatives — John Hull]] — Theory complement
+- [[Greeks]] — Trader-facing exposition of the Greeks
+- [[Implied Volatility]] — The book's central object
+- [[Put-Call Parity]] — Used for cleaning surface inputs
 - [[Impermanent Loss]] — Understanding LP as short vol
 - [[Level 4 — MEV & Algorithmic Trading]] — Greeks and derivatives section

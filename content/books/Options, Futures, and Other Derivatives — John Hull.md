@@ -11,6 +11,9 @@ level: 2, 4
 topics:
   - "[[Geometric Brownian Motion]]"
   - "[[Itô's Lemma]]"
+  - "[[Black-Scholes Equation]]"
+  - "[[Greeks]]"
+  - "[[Implied Volatility]]"
 ---
 
 **The standard derivatives textbook. Covers Black-Scholes, Greeks, and pricing from first principles.**
@@ -23,14 +26,19 @@ The Greeks chapter is essential for understanding how to decompose and manage ex
 
 ## Key Takeaways
 
-- **Black-Scholes derivation.** Delta hedging argument → riskless portfolio → PDE → closed-form solution. Understand the logic, not just the formula.
-- **The Greeks.** Delta, Gamma, Theta, Vega, Rho — each quantifies a different dimension of option risk. Taylor expansion connects them: `dV ≈ Δ·dS + ½Γ·(dS)² + Θ·dt`.
-- **Implied volatility.** The market's consensus forecast of future volatility, backed out from option prices. The vol smile/skew tells you about tail risk expectations.
+- **[[Black-Scholes Equation|Black-Scholes derivation]].** Delta hedging argument → riskless portfolio → PDE → closed-form solution. Understand the logic, not just the formula.
+- **The [[Greeks]].** Delta, Gamma, Theta, Vega, Rho — each quantifies a different dimension of option risk. Taylor expansion connects them: `dV ≈ Δ·dS + ½Γ·(dS)² + Θ·dt`.
+- **[[Implied Volatility]].** The market's consensus forecast of future volatility, backed out from option prices. The vol smile/skew tells you about tail risk expectations.
 - **Risk-neutral pricing.** Price derivatives by taking expectations under the risk-neutral measure, not the real-world measure. This is the theoretical foundation.
+- **[[Put-Call Parity]].** Model-free no-arbitrage identity between call and put on the same strike — the universal sanity check.
 
 
 ## Connections
 
+- [[Black-Scholes Equation]] — The PDE this book derives and applies
+- [[Greeks]] — Standalone treatment of the Greeks
+- [[Implied Volatility]] — The vol surface chapter
+- [[Put-Call Parity]] — Model-free identity used throughout
 - [[Itô's Lemma]] — The mathematical tool behind Black-Scholes
 - [[Level 4 — MEV & Algorithmic Trading]] — Greeks section
 - [[Impermanent Loss]] — LP as short gamma connects to options theory

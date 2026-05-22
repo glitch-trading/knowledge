@@ -14,6 +14,7 @@ tags:
 | [[Flash Boys 2.0 — Daian et al.]] | Daian et al. | Foundational MEV paper — frontrunning, tx reordering, consensus instability in DEXs | 4 |
 | [[The Deflated Sharpe Ratio — Bailey & López de Prado]] | Bailey & López de Prado | Multiple testing correction for strategy evaluation — avoid false discoveries | 3 |
 | [[Power-Law Distributions in Empirical Data — Clauset et al.]] | Clauset et al. | How to properly fit and test for power laws — market order sizes, tail risks | 1 |
+| [[Returns to Buying Winners and Selling Losers — Jegadeesh & Titman]] | Jegadeesh & Titman (1993) | Founding empirical paper of [[Momentum]] as a tradeable factor | 5 |
 
 ## Whitepapers
 

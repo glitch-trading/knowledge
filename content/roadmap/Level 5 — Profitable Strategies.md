@@ -30,6 +30,7 @@ prerequisites:
 - Strategies that work in high-vol fail in low-vol. Mean reversion works in ranges, momentum in trends.
 - Simple regime indicators: realized vol regimes, funding rate regime, correlation regime
 - Build systems that detect regime changes and adapt allocation or shut down
+- **[[Regime Switching]]** — formalizes the "what regime are we in, and where is it likely to go next?" question as a [[Markov Chain]] over a small set of states. The transition matrix is estimated from labeled history with a count-and-normalize MLE, $n$-step forecasts collapse to a matrix power, and the stationary distribution gives the long-run baseline. The signal lives in the transition probabilities, not the current state label.
 
 ### 5.2 On-Chain Information Alpha
 

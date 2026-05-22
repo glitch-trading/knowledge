@@ -41,6 +41,7 @@ $$\delta^a + \delta^b = \gamma\sigma^2(T-t) + \frac{2}{\gamma}\ln\left(1 + \frac
 - Avellaneda & Stoikov, "High-frequency trading in a limit order book" (2008)
 - Gueant, *The Financial Mathematics of Market Making* (2017)
 - Harris, *Trading and Exchanges*, Chapter 13
+- **MIT Quant Bible** (MIT Sloan Business Club PDF) §6 — the trader-side mental model: three determinants of a quote (theoretical value, last traded price, current position); how to skew quotes asymmetrically when inventory is non-flat; how to update mid after each trade by inferring the counterparty's theo from which side they took. Case studies (sports betting, country population, trade-or-tighten) play out full multi-step interactions.
 
 ## Connections
 - [[Market Maker]] — the entity performing market making

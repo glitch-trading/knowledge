@@ -16,10 +16,11 @@ Overfitting occurs when a model or strategy is tuned so tightly to historical da
 In quantitative trading, overfitting is the single most common failure mode. You backtest 200 parameter combinations, find one with a [[Sharpe Ratio]] of 3.0, deploy it, and watch it bleed money. The strategy was never real — it was an artifact of data mining.
 
 **Key mechanisms:**
-- **Multiple testing**: Test enough hypotheses and some will appear significant by chance. 100 strategies at 5% significance → ~5 false positives.
+- **Multiple testing**: Test enough hypotheses and some will appear significant by chance. 100 strategies at 5% significance → ~5 false positives. See [[Hypothesis Testing]].
 - **Data snooping**: Repeatedly looking at the same dataset to "discover" patterns. Each peek contaminates your statistical tests.
 - **Excessive parameters**: More free parameters = more ways to fit noise. A 50-parameter model can fit almost any historical dataset perfectly.
-- **Survivorship bias**: Only seeing strategies/funds that survived, not the graveyard of failures.
+- **[[Survivorship Bias]]**: Only seeing strategies/funds that survived, not the graveyard of failures.
+- **[[Look-Ahead Bias]]**: Using information that wasn't actually available at simulated decision time. The most common backtest-killer.
 
 ## Why It Matters
 
@@ -58,4 +59,7 @@ Where $N$ = number of strategies tested. If you tested 100 strategies, your sign
 
 - [[Sharpe Ratio]] — The metric most vulnerable to overfitting via multiple testing
 - [[The Deflated Sharpe Ratio — Bailey & López de Prado]] — Statistical correction for overfitting in strategy evaluation
+- [[Hypothesis Testing]] — Multiple testing without correction is the most common path to overfit conclusions
+- [[Survivorship Bias]] — A data-sourcing failure that masquerades as edge
+- [[Look-Ahead Bias]] — A logic failure that masquerades as edge
 - [[Probability Distributions]] — Understanding why random variation produces spurious results
