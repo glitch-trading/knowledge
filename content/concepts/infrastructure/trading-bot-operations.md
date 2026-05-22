@@ -66,11 +66,30 @@ Most live-trading failures are operational, not analytical. The bot didn't have 
 ### 6. Pre-live discipline
 
 - **Default to [[paper-trading|paper mode]].** Live execution should require explicit, intentional opt-in (multiple flags, environment toggle, configuration switch — pick the construction that makes accidental live trading impossible).
+- **Live confirmation phrase.** On top of the flag, gate the first real submit of a session on a typed confirmation phrase. A boolean is easy to flip by accident; a phrase requires intent. Cheap insurance against fat-fingered restarts in live mode.
 - **Live graduation criteria.** Articulated before paper trading starts: minimum N completed paper trades, win-rate / Sharpe within band of backtest, N consecutive days without unhandled exception.
 - **Stage live exposure.** First-week sizes well below model. Compare live vs. paper P&L daily; investigate divergence beyond tolerance.
 - **Postmortems on every incident.** Kill-switch trigger, unexpected loss, missed fill — written up briefly with cause, fix, and preventative change. Cheap to do; compounds.
 
-### 7. Tooling stack by shop size
+### 7. State reconciliation
+
+The bot's internal model of "what positions do I hold" can drift from the venue's truth — and the venue is always right. Sources of drift: partial fills, websocket gaps that miss a fill event, manual operator action, retried submits that double-fill, exchange-side liquidations, post-restart cold start.
+
+- **Reconcile on a cadence.** Every loop, or at minimum every N minutes, fetch live positions and balances from each venue and compare to the local journal. Divergence is a *risk event*, not a logging line — page on it.
+- **Treat failed opens as a risk condition, not a retry condition.** In a multi-leg structure, if leg A fills and leg B fails (rejected, timed out, partial), the bot is now directional. The correct response is not "retry leg B"; it is "halt new entries, reconcile, and either complete or unwind the partial". See [[leg-risk|Leg Risk]].
+- **Operator escape hatch: explicit reduce-only command.** Maintain a manual command that takes `(venue, symbol, size)` and sends a reduce-only order. When auto-position-detection fails (mis-parsed symbol, alias mismatch, stale state), the operator needs a way to flatten by name without convincing the bot the position exists. Build this *before* you need it.
+- **Local journal is a derivative of venue state, not a substitute for it.** Use the journal for attribution, decisions, and replays; use the venue for "what am I actually holding right now".
+
+### 8. Credential and session lifecycle
+
+API keys, signed sessions, and JWTs all expire. A bot that cannot read positions or submit orders because its token quietly expired is a bot whose hedges drift unattended.
+
+- **Detect expiry as a class of error.** Catch the venue-specific auth-failure signal explicitly; do not collapse it into "generic API error" and retry forever. An expired session and a network blip want different responses.
+- **Refresh / re-auth before degradation.** If the venue gives session lifetime, refresh at e.g. 80% of lifetime, not on the failure. Tie the heartbeat to a successful authenticated round-trip, not just to socket liveness.
+- **Page on auth failure.** Auth failure during a held position is a "bot can no longer manage risk" event. It belongs in the highest alert tier alongside kill-switch triggers.
+- **No silent fallback to read-only.** A bot that can read but not write is worse than one that has halted: it keeps making decisions it cannot execute, then drifts further from venue state. Halt and page.
+
+### 9. Tooling stack by shop size
 
 The operational checks above don't change with scale — only the implementations do. A small Alpaca bot needs the same discipline (kill switch, structured logs, off-host journal) as a co-located HFT engine. What changes is cost, latency budget, and which layer of the stack you build versus buy.
 
@@ -92,7 +111,7 @@ The operational checks above don't change with scale — only the implementation
 - *Hosting:* full co-location inside the exchange data center, kernel-bypass NICs (Solarflare, Mellanox), tuned Linux, sometimes FPGA / ASIC tick-to-trade paths. Microsecond and sub-microsecond budgets.
 - *Stack:* C++ / Rust hot path, custom OMS / EMS, Python reserved for research and offline analytics.
 
-### 8. Anti-patterns
+### 10. Anti-patterns
 
 - Hardcoded credentials anywhere in source.
 - Single key with full account permissions.
@@ -114,6 +133,7 @@ The operational checks above don't change with scale — only the implementation
 - [[kill-switch|Kill Switch]] — the structural safeguard automating "stop trading when conditions degrade"
 - [[trade-journaling|Trade Journaling]] — the durable record of decisions and outcomes the operations layer produces
 - [[leg-risk|Leg Risk]] — execution atomicity is one of the operational concerns the bot must handle
+- [[funding-rate-arbitrage|Funding Rate Arbitrage]] — concrete strategy where reconciliation, reduce-only escapes, and credential lifecycle are first-class concerns
 - [[trading-psychology|Trading Psychology]] — operator-discipline issues that operational structure removes from the loop
 - [[infrastructure-moc|Infrastructure MOC]] — broader inventory of tools and patterns
 - [[maximum-drawdown|Maximum Drawdown]] / [[position-sizing|Position Sizing]] — risk-side inputs the kill switch is calibrated against
