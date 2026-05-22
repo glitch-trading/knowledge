@@ -11,29 +11,29 @@ Quantitative trading, statistical arbitrage, and market making — from zero to 
 
 | Level                                       | Focus                                                                  | Status |
 | ------------------------------------------- | ---------------------------------------------------------------------- | ------ |
-| [[Level 1 — Fundamentals]]                  | Math, probability, programming, market mechanics                       |        |
-| [[Level 2 — Basic Probabilistic Arbitrage]] | Stochastic calculus, optimization, Avellaneda-Stoikov, data pipelines  |        |
-| [[Level 3 — Hands-On Niche Markets]]        | Econometrics, backtesting, risk management, first live strategies      |        |
-| [[Level 4 — MEV & Algorithmic Trading]]     | MEV, on-chain execution, AMM math, derivatives, order execution        |        |
-| [[Level 5 — Profitable Strategies]]         | Portfolio theory, stat arb execution, funding rate, DeFi opportunities |        |
-| [[Level 6 — Advanced Topics]]               | ML, infrastructure, advanced microstructure, Bayesian methods          |        |
+| [[level-1-fundamentals|Level 1 — Fundamentals]]                  | Math, probability, programming, market mechanics                       |        |
+| [[level-2-basic-probabilistic-arbitrage|Level 2 — Basic Probabilistic Arbitrage]] | Stochastic calculus, optimization, Avellaneda-Stoikov, data pipelines  |        |
+| [[level-3-hands-on-niche-markets|Level 3 — Hands-On Niche Markets]]        | Econometrics, backtesting, risk management, first live strategies      |        |
+| [[level-4-mev-and-algorithmic-trading|Level 4 — MEV & Algorithmic Trading]]     | MEV, on-chain execution, AMM math, derivatives, order execution        |        |
+| [[level-5-profitable-strategies|Level 5 — Profitable Strategies]]         | Portfolio theory, stat arb execution, funding rate, DeFi opportunities |        |
+| [[level-6-advanced-topics|Level 6 — Advanced Topics]]               | ML, infrastructure, advanced microstructure, Bayesian methods          |        |
 
 ## Quick Links
 
-- [[Essential Bookshelf]]
-- [[Key Papers]]
-- [[Core Principles]]
-- [[Quant Firms & Practice Resources]]
+- [[essential-bookshelf|Essential Bookshelf]]
+- [[key-papers|Key Papers]]
+- [[core-principles|Core Principles]]
+- [[quant-firms-and-practice-resources|Quant Firms & Practice Resources]]
 
 ## Maps of Content
 
-- [[Math MOC]] — algebra, calculus, linear algebra, stochastic calculus
-- [[Probability & Statistics MOC]] — distributions, stochastic processes, econometrics
-- [[Market Structure MOC]] — order books, market making, CEX, DEX, AMMs
-- [[Trading Strategies MOC]] — arbitrage types, stat arb, funding rate, MEV
-- [[Risk Management MOC]] — position sizing, risk metrics, crypto-specific risks
-- [[Infrastructure MOC]] — data pipelines, execution systems, monitoring
-- [[AI in Trading MOC]] — LLMs, RAG, multi-agent systems in quant research
+- [[math-moc|Math MOC]] — algebra, calculus, linear algebra, stochastic calculus
+- [[probability-and-statistics-moc|Probability & Statistics MOC]] — distributions, stochastic processes, econometrics
+- [[market-structure-moc|Market Structure MOC]] — order books, market making, CEX, DEX, AMMs
+- [[trading-strategies-moc|Trading Strategies MOC]] — arbitrage types, stat arb, funding rate, MEV
+- [[risk-management-moc|Risk Management MOC]] — position sizing, risk metrics, crypto-specific risks
+- [[infrastructure-moc|Infrastructure MOC]] — data pipelines, execution systems, monitoring
+- [[ai-in-trading-moc|AI in Trading MOC]] — LLMs, RAG, multi-agent systems in quant research
 
 ## Contributing
 

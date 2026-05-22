@@ -1,0 +1,51 @@
+---
+type: concept
+title: "Market Making"
+tags:
+  - concept
+  - market-structure
+  - strategies
+level: 1-2
+prerequisites:
+  - "[[order-book|Order Book]]"
+  - "[[spread|Spread]]"
+  - "[[order-types|Order Types]]"
+---
+
+## What It Is
+Market making is the strategy of continuously posting limit orders on both the bid and ask sides of the [[order-book|Order Book]], earning the [[spread|Spread]] as compensation for providing [[liquidity|Liquidity]]. A market maker does not bet on direction — they profit from the flow of trades crossing their quotes, buying at the bid and selling at the ask.
+
+The fundamental challenge: market makers are always on the wrong side of informed trades ([[adverse-selection|Adverse Selection]]) and accumulate inventory that exposes them to directional risk ([[inventory-risk|Inventory Risk]]). Successful market making requires managing these risks while capturing enough spread to remain profitable.
+
+## Why It Matters
+Market making is one of the most established and well-studied strategies in quantitative trading:
+- **Revenue model**: Earn the spread on each round-trip (buy at bid, sell at ask), minus losses from adverse selection and inventory drawdowns
+- **[[avellaneda-stoikov|Avellaneda-Stoikov]]** is the canonical academic model: it derives the optimal bid and ask quotes by maximizing expected utility, accounting for inventory risk through the [[reservation-price|Reservation Price]]
+- **Practical implementation** requires decisions beyond the model: how to set $\gamma$, how to estimate $\sigma$ and $k$, position limits, fee structures, multiple venues
+- **In crypto/DeFi**: market making also occurs on [[amm|AMM]]s, where the mechanism is different (providing liquidity to a pool rather than posting limit orders)
+- **Edge**: comes from speed (latency), better models (more accurate parameter estimates), and risk management (position limits, hedging)
+
+## Key Equations
+
+**Avellaneda-Stoikov optimal quotes** (the core result):
+
+Reservation price: $r = s - q\gamma\sigma^2(T-t)$
+
+Optimal spread around reservation price:
+
+$$\delta^a + \delta^b = \gamma\sigma^2(T-t) + \frac{2}{\gamma}\ln\left(1 + \frac{\gamma}{k}\right)$$
+
+**Simplified P&L per round-trip**: $\text{P\&L} \approx \text{spread} - \text{adverse selection cost} - \text{fees}$
+
+## Resources
+- Avellaneda & Stoikov, "High-frequency trading in a limit order book" (2008)
+- Gueant, *The Financial Mathematics of Market Making* (2017)
+- Harris, *Trading and Exchanges*, Chapter 13
+- **MIT Quant Bible** (MIT Sloan Business Club PDF) §6 — the trader-side mental model: three determinants of a quote (theoretical value, last traded price, current position); how to skew quotes asymmetrically when inventory is non-flat; how to update mid after each trade by inferring the counterparty's theo from which side they took. Case studies (sports betting, country population, trade-or-tighten) play out full multi-step interactions.
+
+## Connections
+- [[market-maker|Market Maker]] — the entity performing market making
+- [[spread|Spread]] — the market maker's gross revenue per round-trip
+- [[inventory-risk|Inventory Risk]] — the primary risk that market makers face
+- [[adverse-selection|Adverse Selection]] — trading against informed counterparties
+- [[avellaneda-stoikov|Avellaneda-Stoikov]] — the canonical optimal market-making model

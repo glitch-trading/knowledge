@@ -1,0 +1,62 @@
+---
+type: concept
+title: "Spread"
+tags:
+  - concept
+  - market-structure
+level: 1
+prerequisites:
+  - "[[order-book|Order Book]]"
+---
+
+## What It Is
+The spread (or bid-ask spread) is the difference between the best ask price and the best bid price in the [[order-book|Order Book]]:
+
+$$\text{spread} = p_{\text{best ask}} - p_{\text{best bid}}$$
+
+It represents the cost of immediately round-tripping (buying and then selling, or vice versa). The spread exists because limit order providers demand compensation for the risks of providing liquidity — primarily [[adverse-selection|Adverse Selection]] and [[inventory-risk|Inventory Risk]].
+
+A tighter spread means a more liquid market. A wider spread means higher trading costs for market-order users but higher potential profit per trade for market makers.
+
+## Why It Matters
+The spread is the market maker's primary source of revenue:
+- Every time a market maker buys at the bid and sells at the ask, they earn approximately the spread
+- In [[avellaneda-stoikov|Avellaneda-Stoikov]], the optimal spread is derived from first principles:
+
+$$\delta^a + \delta^b = \gamma \sigma^2 (T - t) + \frac{2}{\gamma} \ln\left(1 + \frac{\gamma}{k}\right)$$
+
+- The spread must be wide enough to compensate for:
+  - **Inventory risk**: holding a position in a volatile asset
+  - **Adverse selection**: trading against informed counterparties
+  - **Operational costs**: fees, infrastructure, etc.
+- In practice, competitive pressure pushes the spread to the minimum viable level
+
+## Key Equations
+
+**Simple spread**:
+
+$$\text{spread} = p_{\text{ask}} - p_{\text{bid}}$$
+
+**Relative spread** (useful for cross-asset comparison):
+
+$$\text{relative spread} = \frac{p_{\text{ask}} - p_{\text{bid}}}{s} \quad \text{where } s = \frac{p_{\text{ask}} + p_{\text{bid}}}{2}$$
+
+**Avellaneda-Stoikov optimal spread** (symmetric case, $q = 0$):
+
+$$\delta^* = \gamma \sigma^2 (T - t) + \frac{2}{\gamma} \ln\left(1 + \frac{\gamma}{k}\right)$$
+
+**Effective spread** (execution-quality measure for a single trade at price $p$ against contemporaneous mid $m$):
+
+$$\text{effective spread} = 2 \cdot |p - m|$$
+
+Aggregated across trades, the effective spread is the canonical microstructure metric for realized round-trip cost; it captures price impact that the quoted spread misses. A compressed effective spread typically signals low information asymmetry; an expanded effective spread relative to the quoted spread signals informed flow trading through the book — a common short-horizon signal alongside [[vpin|VPIN]].
+
+## Resources
+- Avellaneda-Stoikov paper, Proposition 1
+- Harris, *Trading and Exchanges*, Chapter 6
+
+## Connections
+- [[order-book|Order Book]] — the spread is directly observable from the top of the book
+- [[market-making|Market Making]] — the spread is the market maker's gross revenue per round-trip
+- [[adverse-selection|Adverse Selection]] — informed traders cause losses that the spread must compensate for
+- [[avellaneda-stoikov|Avellaneda-Stoikov]] — derives the optimal spread from utility maximization

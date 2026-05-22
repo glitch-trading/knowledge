@@ -24,6 +24,7 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 ## Conventions
 
 - Notes use `[[wikilinks]]` for internal links and YAML frontmatter
+- Filenames are kebab-case (lowercase, hyphens, no apostrophes or diacritics). Wikilinks target the kebab basename with an alias for the display title: `[[bayes-theorem|Bayes' Theorem]]`. Frontmatter `title:` carries the human-readable name.
 - Every book, paper, and course referenced in the roadmap must have its own page
 - Plain-text resource mentions should be converted to wikilinks
 - Concept notes follow: What It Is, Why It Matters, Key Equations, Resources, Connections
@@ -62,5 +63,5 @@ When asked to ingest an article, blog post, thread, or video transcript:
 2. **Translate, don't transcribe.** Rewrite extracted ideas in the KB's voice — concise, technical, framed against existing concepts. Never paste author phrasing verbatim. Do not name the author or post in the note (the KB is concept-centric, not source-centric). If a Resources link is warranted, add the source there.
 3. **Prefer updating existing notes** over creating new ones. Only create a new concept note if the idea is substantial enough to stand alone and is genuinely missing — search `concepts/` first.
 4. **Cross-disciplinary content** (e.g., a discretionary-TA post) should be folded in only where it generalizes. A "weekly bias" concept from a discretionary trader maps to HTF regime conditioning for a quant; write the general form, not the TA-specific form.
-5. **MOC linkage is required.** Every new concept must be linked from at least one relevant MOC (`Trading Strategies MOC`, `Risk Management MOC`, `Market Structure MOC`, `Math MOC`, `Probability & Statistics MOC`, `Infrastructure MOC`).
+5. **MOC linkage is required.** Every new concept must be linked from at least one relevant MOC (`trading-strategies-moc`, `risk-management-moc`, `market-structure-moc`, `math-moc`, `probability-and-statistics-moc`, `infrastructure-moc`).
 6. **Report what was skipped.** When done, briefly note what was intentionally left out and why, so the user can flag anything misjudged.
