@@ -6,25 +6,39 @@ tags:
   - infrastructure
 ---
 
+## Operations & Reliability
+- [[Trading Bot Operations]] — end-to-end production checklist (ingestion, execution, OpSec, deployment, monitoring)
+- [[Paper Trading]] — pre-live validation discipline and ongoing canary
+- [[Kill Switch]] — automated halts on drawdown, loss streaks, stale data, behavioral divergence
+
 ## Data Pipeline
 - WebSocket connections (CEX APIs)
 - DEX event listeners / subgraph queries
 - Prediction market data feeds
 - TimescaleDB for time-series storage
 - Redis for real-time state
+- Stale-data guard (refuse trades on data older than $\tau$)
+- Auto-reconnect with exponential backoff; sequence-number / heartbeat checks
+- Cross-feed sanity cross-checks
 
 ## Execution Systems
 - Order management
 - Atomic on-chain execution (smart contracts)
 - Gas optimization
 - Nonce management
-- Kill switches
+- [[Kill Switch|Kill switches]]
+- Idempotent submit (client order id, persisted outbox)
+- Async / non-blocking I/O end-to-end
+- Dedicated execution endpoint separated from research traffic
 
 ## Monitoring & Alerting
 - Real-time P&L dashboards
 - Strategy health metrics
 - Anomaly detection
-- Automated kill switches
+- Automated [[Kill Switch|kill switches]]
+- Heartbeat (absence-is-the-alert)
+- Tiered alerts to avoid alert fatigue
+- Structured logs with correlation ids; rotating files or centralized store
 
 ## Libraries & Tools
 

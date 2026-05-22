@@ -47,6 +47,11 @@ tags:
 - Historical crash scenarios (March 2020, May 2021, FTX Nov 2022)
 - Correlation breakdown under stress
 
+## Operational Risk Controls
+- [[Kill Switch]] — automated halt on drawdown / loss streaks / stale data / behavioral divergence
+- [[Paper Trading]] — validation layer that catches operational bugs before live capital sees them
+- [[Trading Bot Operations]] — the production checklist that prevents most "the strategy was fine but…" losses
+
 ## Execution & Process Discipline
 - [[Trade Journaling]]
 - [[Trading Psychology]]

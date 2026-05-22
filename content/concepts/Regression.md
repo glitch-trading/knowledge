@@ -58,6 +58,7 @@ $$SE(\hat{\beta}) = \sqrt{\hat{\sigma}^2 (X^T X)^{-1}}$$
 - Wooldridge — *Introductory Econometrics* (gold standard textbook)
 - James, Witten, Hastie, Tibshirani — *An Introduction to Statistical Learning* (ISL)
 - Angrist & Pischke — *Mostly Harmless Econometrics* (causal inference focus)
+- **MIT Quant Bible** (MIT Sloan Business Club PDF) §4 — geometric view of OLS as projection (`ŷ = X(XᵀX)⁻¹Xᵀy` is the hat matrix); multivariate regression as successive orthonormalization; bias-variance vs. dimensionality reduction comparison (subset selection / Ridge / Lasso / LAR / PCR); and the omitted-variables-bias formula `β_short − β_long = π₁ × γ` used qualitatively even when the omitted variable is unobserved.
 
 ## Connections
 

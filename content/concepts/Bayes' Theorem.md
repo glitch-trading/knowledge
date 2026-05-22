@@ -57,6 +57,7 @@ $$\text{posterior odds} = \text{likelihood ratio} \times \text{prior odds}$$
 - *Bayesian Data Analysis* by Gelman et al. — practical Bayesian methods
 - *The Signal and the Noise* by Nate Silver — Bayesian thinking applied
 - 3Blue1Brown: *Bayes' Theorem* (YouTube)
+- **MIT Quant Bible** (MIT Sloan Business Club PDF) §2.1 — Tversky-Kahneman cab problem, the Steve-the-librarian problem, and the "1000 coins / one double-headed / 10 heads in a row" classic. All three drill the base-rate-neglect failure mode that shows up in phone screens.
 
 ## Connections
 
