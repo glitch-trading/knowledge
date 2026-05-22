@@ -27,6 +27,7 @@ tags:
 - [[Constant Product Formula]]
 - [[Curve Stableswap]]
 - [[Impermanent Loss]]
+- [[Prediction Markets]] (Polymarket, Kalshi, Azuro) — binary CLOB and LMSR-AMM venues
 
 ## Execution
 - [[TWAP]]
