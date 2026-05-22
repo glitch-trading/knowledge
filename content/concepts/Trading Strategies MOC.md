@@ -19,6 +19,11 @@ tags:
 - Prediction market ↔ spot/derivatives signals
 - Cross-venue information flow
 
+## Strategy Archetypes
+- [[Mean Reversion]]
+- Trend following / momentum
+- Breakout vs. range-extremity fade (HTF-context dependent)
+
 ## Prediction Markets
 - [[Prediction Markets]] (Polymarket, Kalshi, Azuro)
 - [[Logarithmic Market Scoring Rule]] (LMSR AMM)
@@ -39,9 +44,21 @@ tags:
 - Funding rate harvesting
 - Basis trading (perp vs spot)
 
+## Alpha Construction & Combination
+- [[Information Coefficient]]
+- [[Information Ratio]]
+- [[Fundamental Law of Active Management]] (IR ≈ IC · √breadth)
+- [[Alpha Combination]] — weighting many weak signals into a single forecast
+- [[Fama-French Factor Model]] — canonical multi-factor decomposition
+
 ## Risk & Sizing
-- [[Kelly Criterion]]
+- [[Kelly Criterion]] (incl. uncertainty-adjusted empirical Kelly)
 - [[Position Sizing]]
-- [[Sharpe Ratio]] / [[Sortino Ratio]]
+- [[Sharpe Ratio]] / [[Sortino Ratio]] / [[Information Ratio]]
 - [[Maximum Drawdown]]
 - [[Overfitting]] and backtest pitfalls
+
+## Process & Execution Discipline
+- [[Trade Journaling]]
+- [[Trading Psychology]]
+- [[Market Profile]] (TPO — trade location & confluence)
