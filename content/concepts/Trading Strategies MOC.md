@@ -32,6 +32,14 @@ tags:
 - Signal fusion: [[Maximum Entropy Principle]]
 - Anomaly / insider-flow detection: rolling [[Shannon Entropy]] with $|dH/dt|$ threshold
 
+## Combinatorial / Prediction-Market Arbitrage (Level 5)
+- [[Combinatorial Prediction Markets]] — marginal-polytope arbitrage across logically linked events
+- [[Bregman Divergence]] / [[Frank-Wolfe Algorithm]] — math + algorithm for projection onto the arbitrage-free polytope
+- Integer Programming for arbitrage detection (constraint generation; Gurobi / HiGHS / CPLEX)
+
+## Execution Risk
+- [[Leg Risk]] — non-atomic multi-leg fills; capacity bound = $\Delta p \cdot \min$(leg volumes)
+
 ## DeFi Strategies
 - Stablecoin DEX arb
 - [[Liquidation Botting]]

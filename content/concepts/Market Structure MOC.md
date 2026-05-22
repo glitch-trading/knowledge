@@ -36,6 +36,8 @@ tags:
 - [[Market Profile]] (TPO — value area, POC, single prints)
 - Iceberg orders
 - Scaling into a position vs. single-clip entry
+- [[Leg Risk]] — non-atomic multi-leg fills (cross-venue, multi-market, on-chain)
+- Atomicity spectrum — native atomic / bundle-atomic / portfolio-non-atomic / cross-chain
 
 ## MEV (Level 4)
 - [[MEV]]
