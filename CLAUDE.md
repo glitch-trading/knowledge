@@ -5,7 +5,17 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 ## Structure
 
 - `roadmap/` — Learning levels 1-6, the main progression path
-- `concepts/` — Individual concept notes (MOCs and leaf notes)
+- `concepts/` — Individual concept notes (MOCs and leaf notes), organized into topic subfolders:
+  - `concepts/math/` — calculus, optimization, stochastic calculus, PDEs, dynamic programming
+  - `concepts/probability-stats/` — distributions, regression, time series, Markov / HMM, information theory
+  - `concepts/strategies/` — arbitrage, MEV, mean reversion, market making, momentum, combinatorial
+  - `concepts/market-microstructure/` — order book, AMMs, liquidity, prediction-market venues, LMSR
+  - `concepts/execution/` — TWAP, VWAP
+  - `concepts/derivatives-options/` — Black-Scholes, Greeks, implied vol, put-call parity
+  - `concepts/risk/` — VaR, Sharpe, Kelly, factor models, alpha attribution, operational risk
+  - `concepts/ai/` — LLMs, RAG, multi-agent systems in quant
+  - `concepts/infrastructure/` — bot ops, infrastructure MOC
+  - `concepts/trader-meta/` — psychology, journaling, mental math, reflective reads
 - `books/` — One page per book with key takeaways and connections
 - `papers/` — One page per paper with summary, key results, and connections
 - `courses/` — One page per course/video series with key takeaways and connections
@@ -29,7 +39,7 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 - Do not add time estimates or durations to any content
 - Do not use "tier" — use "level" for the roadmap progression
 - Keep notes concise — no `## Notes`, `## Progress`, or `## Chapter Notes` sections
-- New concepts go in `concepts/`, books in `books/`, papers in `papers/`, courses in `courses/`
+- New concepts go in the appropriate `concepts/<topic>/` subfolder, books in `books/`, papers in `papers/`, courses in `courses/`. If a new concept does not fit any existing topic folder, add a new folder rather than dropping the file at `concepts/` root.
 - Check for orphan wikilinks after adding new references
 - Always add a short, runnable code snippet (fenced, language-tagged) when the concept has a computable side — pricing, estimation, simulation, sizing, signal construction. The snippet should illustrate the equations directly above it, not duplicate them. Skip code only when the idea is purely conceptual or the snippet would be longer than the surrounding prose.
 - Always add a mermaid diagram when the concept involves a flow, sequence, state machine, dependency graph, or visual structure (e.g., sandwich attacks, MEV pipelines, regime transitions, derivation chains). Skip diagrams when the relationship is already obvious from prose or a single equation.

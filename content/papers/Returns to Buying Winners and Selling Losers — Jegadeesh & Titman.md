@@ -43,7 +43,7 @@ with $\hat\alpha$ significantly positive across $(J, K)$ combinations.
 ## Connections
 
 - [[Momentum]] — The factor concept this paper established
-- [[Fama-French Three-Factor Model]] — Momentum is the canonical "fourth factor" later added (Carhart 1997)
+- [[Fama-French Factor Model]] — Momentum is the canonical "fourth factor" later added (Carhart 1997)
 - [[Statistical Arbitrage]] — Momentum is one of the canonical [[Statistical Arbitrage|stat arb]] signals
 - [[Overfitting]] — Momentum is one of the few academic anomalies that has survived out-of-sample across decades and markets
 - [[The Deflated Sharpe Ratio — Bailey & López de Prado]] — Useful counterweight: most "discovered" anomalies don't survive multiple-testing correction; momentum does

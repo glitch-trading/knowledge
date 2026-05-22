@@ -24,7 +24,7 @@ Equivalently, PCA is the SVD of $X$: if $X = U S V^\top$, the right singular vec
 
 PCA is the workhorse for extracting structure from high-dimensional financial data. Three uses dominate:
 
-- **Factor discovery.** Apply PCA to a panel of stock or asset returns. The first principal component is almost always "the market" — every asset loads on it positively. PC2-PC5 capture sector / style / regional factors. For 500 stocks, the first 5 components typically explain ~70% of variance — the rest is asset-specific noise. This is the empirical foundation of factor investing, which models like [[CAPM]] and [[Fama-French Three-Factor Model]] then formalize.
+- **Factor discovery.** Apply PCA to a panel of stock or asset returns. The first principal component is almost always "the market" — every asset loads on it positively. PC2-PC5 capture sector / style / regional factors. For 500 stocks, the first 5 components typically explain ~70% of variance — the rest is asset-specific noise. This is the empirical foundation of factor investing, which models like [[CAPM]] and [[Fama-French Factor Model]] then formalize.
 - **Covariance regularization.** The sample covariance matrix on 500 stocks needs ~$500 \times 500 / 2 \approx 125{,}000$ pairwise estimates from a few hundred observations — wildly underdetermined. Reconstructing $\Sigma$ from the top-$k$ eigenvectors plus a noise floor is a standard fix and stabilizes [[Portfolio Optimization]].
 - **Dimensionality reduction for ML.** Replace 500 correlated price-derived features with 10 orthogonal components before fitting a model. Reduces collinearity, speeds training, often helps generalization.
 
@@ -76,6 +76,6 @@ On daily returns for an S&P 500 panel, the first eigenvalue usually carries 40-6
 
 - [[Portfolio Optimization]] — Top-$k$ PCA stabilizes the covariance matrix used in mean-variance
 - [[CAPM]] — Single-factor model whose empirical analogue is PC1 of stock returns
-- [[Fama-French Three-Factor Model]] — Pre-specified factors that loosely correspond to top PCs in equity returns
+- [[Fama-French Factor Model]] — Pre-specified factors that loosely correspond to top PCs in equity returns
 - [[Regression]] — Principal component regression replaces collinear predictors with their PCs
 - [[Statistical Arbitrage]] — Residuals after removing top PCs are the canonical "alpha" candidates

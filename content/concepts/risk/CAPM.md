@@ -31,7 +31,7 @@ CAPM is empirically a weak forecasting model — beta alone does not explain the
 - **Alpha** is defined relative to CAPM (and its successors). When a quant fund advertises alpha, it means the intercept $\alpha$ in the regression $R_i - R_f = \alpha + \beta(R_m - R_f) + \varepsilon$ — return that beta cannot explain.
 - **Hedging by beta** is the simplest [[Statistical Arbitrage|market-neutral]] construction: long $\$X$ of a stock, short $\$\beta X$ of an index futures contract.
 
-The empirical failures of CAPM motivated factor extensions: the [[Fama-French Three-Factor Model]] adds size and value, Carhart adds [[Momentum]], and modern multi-factor models add quality, low-volatility, and investment factors.
+The empirical failures of CAPM motivated factor extensions: the [[Fama-French Factor Model]] adds size and value, Carhart adds [[Momentum]], and modern multi-factor models add quality, low-volatility, and investment factors.
 
 ## Key Equations
 
@@ -64,7 +64,7 @@ $$\text{Treynor}_i = \frac{\mathbb{E}[R_i] - R_f}{\beta_i}$$
 ## Connections
 
 - [[Portfolio Optimization]] — CAPM is the equilibrium consequence of universal mean-variance optimization
-- [[Fama-French Three-Factor Model]] — Direct successor that adds size and value
+- [[Fama-French Factor Model]] — Direct successor that adds size and value
 - [[Momentum]] — Added by Carhart (1997) as a fourth factor
 - [[Statistical Arbitrage]] — Beta-neutrality is the simplest factor-neutral construction
 - [[Sharpe Ratio]] — Sharpe and Treynor differ on which "risk" they normalize by
