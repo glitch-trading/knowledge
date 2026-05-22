@@ -42,7 +42,7 @@ For systematic strategies the equivalent failure mode is the *operator* — turn
 
 ## Resources
 
-- [[fooled-by-randomness|Fooled by Randomness]] — narrative bias and survivorship bias in trader self-assessment
+- [[fooled-by-randomness-nassim-taleb|Fooled by Randomness]] — narrative bias and survivorship bias in trader self-assessment
 
 ## Connections
 

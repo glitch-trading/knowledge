@@ -43,7 +43,7 @@ For systematic strategies the journal is the strategy log + monitoring; for disc
 
 ## Resources
 
-- [[fooled-by-randomness|Fooled by Randomness]] — why your unrecorded memory of trades is unreliable
+- [[fooled-by-randomness-nassim-taleb|Fooled by Randomness]] — why your unrecorded memory of trades is unreliable
 
 ## Connections
 
