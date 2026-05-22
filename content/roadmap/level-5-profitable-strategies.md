@@ -119,7 +119,7 @@ Who's on the other side?
 - DeFi LPs: passive liquidity providers not adjusting for [[adverse-selection|Adverse Selection]]
 - Understanding counterparty motivation tells you if your edge is sustainable
 
-- **Resource:** Soros, [[the-alchemy-of-finance|The Alchemy of Finance]]. Taleb, [[fooled-by-randomness|Fooled by Randomness]]. Follow quant finance blogs/Twitter (Quantocracy aggregates).
+- **Resource:** Soros, [[the-alchemy-of-finance-george-soros|The Alchemy of Finance]]. Taleb, [[fooled-by-randomness-nassim-taleb|Fooled by Randomness]]. Follow quant finance blogs/Twitter (Quantocracy aggregates).
 
 ## Prerequisites
 - [[level-4-mev-and-algorithmic-trading|Level 4 — MEV & Algorithmic Trading]]
