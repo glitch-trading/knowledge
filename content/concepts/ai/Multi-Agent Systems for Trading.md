@@ -49,7 +49,7 @@ Multi-agent systems collapse the idea-to-evaluation cycle from weeks to hours.
 - **Code interpreter / sandbox.** Run generated Python with restricted file system and network access.
 - **Vector store / [[Retrieval-Augmented Generation|RAG]] over research history.** Avoid re-deriving things the team has already concluded.
 - **Market data APIs and historical databases.** With strict point-in-time access to prevent [[Look-Ahead Bias]].
-- **Factor regression services.** Pre-built [[Fama-French Three-Factor Model|factor regressions]] callable as a tool.
+- **Factor regression services.** Pre-built [[Fama-French Factor Model|factor regressions]] callable as a tool.
 - **Backtest harness.** A standardized library the implementer must use; rejects code that does not respect timing invariants.
 
 ## Failure Modes

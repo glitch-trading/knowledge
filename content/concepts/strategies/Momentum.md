@@ -31,7 +31,7 @@ Momentum is one of the few academic anomalies that has survived out-of-sample ac
 - **Equity momentum** documented in U.S., European, Japanese, and emerging markets. The U.S. effect has been weaker since 2000 but not zero.
 - **Cross-asset momentum** works on commodities, currencies, fixed income, and crypto. Time-series momentum (an asset's own past return predicts its future return) is also robust.
 - **It survives transaction costs at institutional scale**, unlike many academic factors. Several large funds (AQR, MAN AHL, Winton) run momentum-centric strategies.
-- **It is the Carhart fourth factor** added to the [[Fama-French Three-Factor Model]] in 1997, now standard in factor regressions.
+- **It is the Carhart fourth factor** added to the [[Fama-French Factor Model]] in 1997, now standard in factor regressions.
 
 The hard part is not finding momentum — it is sizing through its drawdowns. Momentum crashes are real and severe: 2009 saw a -85% drawdown in U.S. equity momentum as the market sharply reversed off the March bottom, with the losers (heavily shorted financials) rallying violently while the winners stalled. Risk management *for* the momentum strategy is the practical research frontier.
 
@@ -73,7 +73,7 @@ where $\hat\sigma_t^{\text{mom}}$ is the trailing 6-month realized vol of the mo
 ## Connections
 
 - [[Returns to Buying Winners and Selling Losers — Jegadeesh & Titman]] — Founding empirical paper
-- [[Fama-French Three-Factor Model]] — Momentum is the Carhart fourth factor
+- [[Fama-French Factor Model]] — Momentum is the Carhart fourth factor
 - [[CAPM]] — Momentum alpha persists after controlling for market beta
 - [[Statistical Arbitrage]] — Momentum is one of the canonical [[Statistical Arbitrage|stat-arb]] signals
 - [[Overfitting]] — Momentum is unusual in *not* being a likely overfit; the deflated Sharpe of momentum survives the multiple-testing correction
