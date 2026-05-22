@@ -58,6 +58,9 @@ $$P_{ij}^{(n+m)} = \sum_k P_{ik}^{(n)} P_{kj}^{(m)}$$
 
 ## Connections
 
+- [[Markov Chain]] — the discrete-time, discrete-state Markov process: transition matrix mechanics, $n$-step forecasts, stationary distribution
 - [[Random Walk]] — the simplest Markov process
 - [[Brownian Motion]] — a continuous-state, continuous-time Markov process
 - [[Dynamic Programming]] — requires the Markov property to define value functions
+- [[Regime Switching]] — Markov chains applied to model market regimes
+- [[Hidden Markov Models]] — Markov chain over a latent state, observed through noisy emissions
