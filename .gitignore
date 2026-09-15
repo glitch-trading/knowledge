@@ -1,6 +1,4 @@
 node_modules/
 public/
 .quartz-cache/
-content/.obsidian/workspace.json
-content/.obsidian/workspace-mobile.json
-content/.obsidian/graph.json
+.obsidian/

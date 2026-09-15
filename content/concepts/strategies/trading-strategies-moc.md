@@ -24,6 +24,9 @@ tags:
 - Trend following / momentum
 - Breakout vs. range-extremity fade (HTF-context dependent)
 
+## Signal Construction
+- [[technical-indicators-moc|Technical Indicators MOC]] — trend/volatility/momentum/volume features that feed strategy rules
+
 ## Prediction Markets
 - [[prediction-markets|Prediction Markets]] (Polymarket, Kalshi, Azuro)
 - [[logarithmic-market-scoring-rule|Logarithmic Market Scoring Rule]] (LMSR AMM)

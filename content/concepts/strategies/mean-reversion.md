@@ -14,7 +14,7 @@ Mean reversion is the tendency of a price series — or a spread between series 
 
 **Variants:**
 
-- **Single-asset mean reversion**: price deviations from a rolling mean / VWAP / TWAP / band (Bollinger, Keltner). Most fragile — most "mean reverting" individual assets are actually trending plus noise.
+- **Single-asset mean reversion**: price deviations from a rolling mean / VWAP / TWAP / band ([[bollinger-bands|Bollinger]], Keltner). Most fragile — most "mean reverting" individual assets are actually trending plus noise.
 - **Spread mean reversion (pairs trading)**: two assets are [[cointegration|cointegrated]]; trade the spread when its z-score is extreme. Robust to drift in either leg.
 - **Range extremity plays**: discretionary version — identify a range, fade taps of the high/low when there is no breakout context.
 - **Cross-venue mean reversion**: same asset on two venues drifts apart for microstructural reasons and converges. Closely related to [[spatial-arbitrage|Spatial Arbitrage]] / [[cex-dex-arbitrage|CEX-DEX Arbitrage]] but with timing risk.
