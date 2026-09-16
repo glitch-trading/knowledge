@@ -33,7 +33,7 @@ Equivalently, $\text{RSI}_t = 100 \cdot \overline{U}_t / (\overline{U}_t + \over
 - **The "70/30" trade is largely folklore.** Unconditional "buy at RSI < 30, sell at RSI > 70" loses in trending markets — RSI sits below 30 for weeks during a strong downtrend. The setup only works when conditioned on a [[mean-reversion|mean-reverting]] regime (range, contracted [[bollinger-bands|Bollinger]] BW, low [[atr|ATR]] percentile).
 - **Divergence is the standard discretionary read.** Price makes a new high, RSI doesn't → bearish divergence. Treat as a *feature* whose forward edge you must measure, not a deterministic signal.
 - **Lookback matters more than thresholds.** RSI(2) (Larry Connors' setup) is essentially a one-bar gain/loss filter — sharp, noisy, used for short-horizon MR. RSI(14) is the default. RSI(50) approaches a slow trend feature. Don't reuse the same 70/30 thresholds across these lookbacks — they have completely different distributions.
-- **Stochastic, Williams %R, CCI are close cousins.** All are bounded momentum oscillators with near-identical conditional information. Pick one; don't stack them.
+- **Other oscillators may overlap.** Stochastic and Williams %R also have fixed output ranges. CCI has no fixed conventional output range. Measure feature redundancy and conditional returns before combining them.
 
 ## Key Equations
 
@@ -80,4 +80,4 @@ A reading of 56.7 is mid-range — neither overbought nor oversold under the 70/
 - [[macd|MACD]] — both are momentum indicators; MACD is unbounded, RSI is bounded
 - [[bollinger-bands|Bollinger Bands]] — RSI is to momentum what %B is to price location; pair for confirmation
 - [[mean-reversion|Mean Reversion]] — RSI extremes are a textbook MR feature, valid only in range regimes
-- [[stationarity|Stationarity]] — RSI is bounded, hence stationary by construction; raw price is not
+- [[stationarity|Stationarity]] — bounded output does not imply stationarity; RSI's distribution and dependence structure can change across regimes

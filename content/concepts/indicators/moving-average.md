@@ -68,7 +68,7 @@ print(f"close={close.iloc[-1]:.4f}  SMA={sma.iloc[-1]:.4f}  "
 # close=100.5585  SMA=99.9334  EMA=99.5693  WMA=99.8585
 ```
 
-EMA lags least when price has trended through the window (recent bars dominate). SMA lags least when the move is concentrated in the *middle* of the window. WMA sits between them.
+There is no universal lag ranking across price paths. On a steady linear trend after warmup, this SMA and EMA both lag by $(n-1)/2$ bars; the linearly weighted WMA lags by $(n-1)/3$. For $n=10$, those lags are 4.5, 4.5, and 3 bars. The synthetic path above is not a steady trend.
 
 ## Resources
 

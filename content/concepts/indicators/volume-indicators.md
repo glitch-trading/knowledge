@@ -29,7 +29,7 @@ Volume profile is *price-axis*, not time-axis — it answers "at what prices did
 
 $$\text{CVD}_t = \sum_{i \le t} (V_i^{\text{buy}} - V_i^{\text{sell}})$$
 
-Requires per-trade taker side from the exchange (or a tick-rule estimator like Lee-Ready when only OHLCV is available). The candle-direction-signed proxy used in OBV is a poor substitute for CVD when you have access to the real aggressor flag.
+Use the exchange's per-trade aggressor flag when available. A tick-rule estimate needs individual trade prices; Lee–Ready also uses contemporaneous quotes. OHLCV alone cannot recover trade directions. Candle-direction-signed volume is a proxy, not observed CVD.
 
 ## Why It Matters
 
@@ -64,7 +64,7 @@ volume = pd.Series(np.random.lognormal(10, 0.5, n))
 sign = np.sign(close.diff()).fillna(0)
 obv = (sign * volume).cumsum()
 
-# Volume profile (5 price bins)
+# Approximation: assign each bar's entire volume to its closing-price bin.
 bins = np.linspace(close.min(), close.max(), 6)
 vp = volume.groupby(pd.cut(close, bins=bins, include_lowest=True),
                     observed=False).sum()
@@ -76,7 +76,7 @@ print(f"POC bin={poc}, volume={vp.max():.0f}")
 # POC bin=(99.589, 101.096], volume=643720
 ```
 
-For real CVD you'd replace `sign` with per-trade aggressor side from the exchange feed (Binance `isBuyerMaker`, Bybit `side`, etc.) before aggregating to bar volume.
+The close-binned histogram above is not a traded-volume profile: all intrabar volume is assigned to one price. A true profile bins individual trade prices and sizes. For CVD, map each venue's aggressor field to +1 for buyer-initiated trades or −1 for seller-initiated trades before aggregation; a buyer-maker flag has the opposite sign from a buyer-aggressor flag.
 
 ## Resources
 

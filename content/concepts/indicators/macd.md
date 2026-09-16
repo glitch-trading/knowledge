@@ -17,7 +17,7 @@ $$\text{MACD}_t = \text{EMA}_t^{(12)} - \text{EMA}_t^{(26)}$$
 $$\text{signal}_t = \text{EMA}^{(9)}(\text{MACD})_t$$
 $$\text{hist}_t = \text{MACD}_t - \text{signal}_t$$
 
-The MACD line is a band-limited filter — it removes the slow trend (subtracts the long EMA) and the high-frequency noise (each EMA already smooths). The signal line smooths it once more. The histogram is the residual, and is essentially a *second derivative* of price — it crosses zero before MACD itself crosses signal.
+The MACD line filters price through the difference of two EMAs. The signal line smooths MACD once more. The histogram is their residual: its zero crossing is the MACD/signal crossing, not an earlier event. Changes in histogram slope may precede a crossing, but do not guarantee one.
 
 ## Why It Matters
 
@@ -30,7 +30,7 @@ The MACD line is a band-limited filter — it removes the slow trend (subtracts 
 
 ## Key Equations
 
-**Histogram as second derivative.** With $f = \text{EMA}^{(12)} - \text{EMA}^{(26)}$ (a smoothed first derivative of price), $\text{hist} = f - \text{EMA}^{(9)}(f)$ is the high-passed component of $f$ — equivalent (up to a scale factor) to a second derivative of price filtered to the MACD band.
+**Histogram as a derivative approximation.** With $f = \text{EMA}^{(12)} - \text{EMA}^{(26)}$, $\text{hist} = f - \text{EMA}^{(9)}(f)$ removes a smoothed component of $f$. At low frequencies this behaves approximately like a scaled second derivative of price. It is a discrete filter, not an exact derivative or a forecast.
 
 **Percent MACD** (normalized for cross-asset comparability):
 

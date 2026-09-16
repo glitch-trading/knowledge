@@ -2,3 +2,5 @@ node_modules/
 public/
 .quartz-cache/
 .obsidian/
+__pycache__/
+.pytest_cache/
