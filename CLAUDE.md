@@ -49,7 +49,7 @@ Obsidian vault for the Glitch quant trading learning roadmap.
 
 ## Contribution workflow
 
-- **Never commit additions directly to `main`.** Every new note, edit, or ingest goes on a feature branch and lands via a pull request — even small, single-file changes.
+- New notes, edits and ingests use a feature branch and pull request by default. The repository-specific exception in `AGENTS.md` permits direct commits and non-force pushes to `main` when the owner explicitly requests the respective action.
 - Branch naming: `add/<short-slug>` for new notes (e.g. `add/trade-journaling`), `edit/<short-slug>` for edits to existing notes, `ingest/<source-slug>` for batched ingests of an article/post/transcript.
 - One coherent change per PR. If an ingest produces several unrelated new notes, prefer one PR for the batch (titled after the source) over splintering — reviewers want to see the same filtering decisions together.
 - PR title: Conventional Commits (`feat(concepts): add Mean Reversion and Trade Journaling`, `docs(claude): codify ingest workflow`).
